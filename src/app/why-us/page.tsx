@@ -1,11 +1,12 @@
-import React from 'react'
+import Template from '@/components/template';
+import React from 'react';
 
 function WhyUs() {
   return (
-    <div>
+    <Template>
       <p>Why Us</p>
-    </div>
-  )
+    </Template>
+  );
 }
 
-export default WhyUs
+export default WhyUs;

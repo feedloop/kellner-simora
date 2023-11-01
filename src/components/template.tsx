@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
+import Navbar from './organisms/navbar';
+import Footer from './organisms/footer';
 
-function Template({children}:{children:React.ReactNode}) {
+function Template({ children }: { children: React.ReactNode }) {
   return (
-    <main>{children}</main>
-  )
+    <main>
+      <Navbar />
+      {children}
+      <Footer/>
+    </main>
+  );
 }
 
-export default Template
+export default Template;

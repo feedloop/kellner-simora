@@ -1,10 +1,11 @@
+import Template from '@/components/template'
 import React from 'react'
 
 function Contact() {
   return (
-    <div>
+    <Template>
       <p>Test Contact</p>
-    </div>
+    </Template>
   )
 }
 

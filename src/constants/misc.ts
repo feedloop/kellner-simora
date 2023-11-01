@@ -1,0 +1,1 @@
+export const COMPANY_NAME = "PT. Kellner Simora Internasional"

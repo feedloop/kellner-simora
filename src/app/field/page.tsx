@@ -1,8 +1,9 @@
+import Template from '@/components/template'
 import React from 'react'
 
 function Field() {
   return (
-    <div>Field</div>
+    <Template>Field</Template>
   )
 }
 

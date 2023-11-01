@@ -1,9 +1,9 @@
-import Image from 'next/image'
+import Template from '@/components/template';
 
 export default function Home() {
   return (
-    <main>
-     <p>Test Main</p>
-    </main>
-  )
+      <Template>
+        <p>Test Main</p>
+      </Template>
+  );
 }
