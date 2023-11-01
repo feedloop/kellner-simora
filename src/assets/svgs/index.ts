@@ -6,3 +6,8 @@ export { default as GithubFooter } from './Github.svg';
 export { default as LinkedinFooter } from './Linkedin.svg';
 export { default as PeaceSignFooter } from './PeaceSign.svg';
 export { default as TwitterFooter } from './Twitter.svg';
+export { default as MessageChat } from './MessageChat.svg'
+export { default as Dollar } from './Dollar.svg'
+export { default as Internship } from './Internship.svg'
+export { default as LinePattern } from './LinePattern.svg'
+export { default as Check } from './Check.svg'

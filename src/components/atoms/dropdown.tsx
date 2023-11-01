@@ -4,8 +4,10 @@ import {
   Link,
   Menu,
   MenuButton,
+  MenuButtonProps,
   MenuItem,
   MenuList,
+  MenuProps,
   useDisclosure,
 } from '@chakra-ui/react';
 import { useRouter } from 'next/navigation';
@@ -23,7 +25,7 @@ type DropdownType = {
   items: DropdownItemType[];
 };
 
-function Dropdown({ label, items, icon = <BiChevronDown /> }: DropdownType) {
+function Dropdown({ label, items, icon = <BiChevronDown />,...props }: DropdownType & MenuButtonProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const {push} = useRouter();
 
@@ -37,6 +39,7 @@ function Dropdown({ label, items, icon = <BiChevronDown /> }: DropdownType) {
           as={Button}
           variant={'unstyled'}
           rightIcon={icon}
+          {...props}
         >
           {label}
         </MenuButton>
