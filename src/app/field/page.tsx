@@ -1,10 +1,51 @@
-import Template from '@/components/template'
-import React from 'react'
+import Template from '@/components/template';
+import { COLOR_TEXT } from '@/constants/ui';
+import { Heading, Text, VStack } from '@chakra-ui/react';
+import React from 'react';
+import FieldItem from './_components/field-item';
+import { FieldItems } from '@/constants/lists';
 
 function Field() {
   return (
-    <Template>Field</Template>
-  )
+    <Template>
+      <section className='tw-w-full tw-px-[7rem] tw-py-[6rem]'>
+        <VStack className='tw-text-center'>
+          <Text color={'primary.500'} fontWeight={'semibold'}>
+            Tentang Kami
+          </Text>
+          <Heading
+            as={'h2'}
+            fontWeight={'semibold'}
+            fontSize={'3rem'}
+            lineHeight={'2.75rem'}
+            letterSpacing={'-2%'}
+          >
+            Bidang Usaha
+          </Heading>
+          <Text
+            color={COLOR_TEXT}
+            fontSize={'1.25rem'}
+            maxW={'60%'}
+            mx={'auto'}
+          >
+            We have offices and teams all around the world.
+          </Text>
+        </VStack>
+      </section>
+      <VStack mb={'6rem'} gap={'6rem'}>
+        {FieldItems.map((item) => (
+          <FieldItem
+            buttonLabel={item.buttonLabel}
+            content={item.content}
+            head={item.head}
+            imageUrl={item.imageUrl}
+            smallHead={item.smallHead}
+            key={crypto.randomUUID()}
+          />
+        ))}
+      </VStack>
+    </Template>
+  );
 }
 
-export default Field
+export default Field;

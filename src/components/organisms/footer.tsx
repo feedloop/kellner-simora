@@ -1,4 +1,4 @@
-"use client"
+'use client';
 
 import { FullLogo } from '@/assets/svgs';
 import { SocialFooter } from '@/constants/lists';
@@ -69,7 +69,7 @@ function Footer() {
             <Link color={COLOR_TEXT} href={Routes.Field}>
               Internship
             </Link>
-            <Link color={COLOR_TEXT} href={Routes.Field}>
+            <Link color={COLOR_TEXT} href={Routes.Recruitment}>
               Kuliah sambil Kerja
             </Link>
           </div>
@@ -77,10 +77,12 @@ function Footer() {
       </section>
       <Divider w={'80%'} mx={'auto'} />
       <section className='tw-flex tw-justify-between tw-px-[7rem] tw-py-[3rem]'>
-        <Text color={COLOR_TEXT}>&copy; 2023 {COMPANY_NAME}. All right reserved. </Text>
-        <HStack gap={"1.5rem"}>
+        <Text color={COLOR_TEXT}>
+          &copy; 2023 {COMPANY_NAME}. All right reserved.{' '}
+        </Text>
+        <HStack gap={'1.5rem'}>
           {SocialFooter.map((item) => (
-            <Link href={item.link}>
+            <Link key={crypto.randomUUID()} href={item.link}>
               <Image alt={item.alt} src={item.image} />
             </Link>
           ))}

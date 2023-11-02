@@ -6,13 +6,13 @@ import { Button, HStack, Heading, Text, VStack } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react';
 import AboutIconItem from './about-icon-item';
-import {AiOutlineArrowRight} from 'react-icons/ai'
+import { AiOutlineArrowRight } from 'react-icons/ai';
 import { AboutListItem } from '@/constants/lists';
 import { LinePattern } from '@/assets/svgs';
 
 function AboutSection() {
   return (
-    <section className='tw-py-[6rem] tw-px-[7rem] tw-relative'>
+    <section className='tw-relative tw-px-[7rem] tw-py-[6rem]'>
       <div>
         <Text
           fontSize={'1rem'}
@@ -45,7 +45,7 @@ function AboutSection() {
       <HStack mt={'5.375rem'}>
         <VStack gap={'3rem'}>
           {AboutListItem.map((item) => (
-            <HStack alignItems={'start'}>
+            <HStack key={crypto.randomUUID()} alignItems={'start'}>
               <AboutIconItem icon={item.icon} alt='message-chat-icon' />
               <div>
                 <Text
@@ -56,18 +56,29 @@ function AboutSection() {
                   {item.head}
                 </Text>
                 <Text fontSize={'1rem'}>{item.desc}</Text>
-                <Button variant={'link'} color={'primary.500'} mt={'1.25rem'} rightIcon={<AiOutlineArrowRight/>}>{item.buttonLabel}</Button>
+                <Button
+                  variant={'link'}
+                  color={'primary.500'}
+                  mt={'1.25rem'}
+                  rightIcon={<AiOutlineArrowRight />}
+                >
+                  {item.buttonLabel}
+                </Button>
               </div>
             </HStack>
           ))}
         </VStack>
         <Image
-          className='tw-w-1/2 tw-relative tw-z-10'
+          className='tw-relative tw-z-10 tw-w-1/2'
           src={AboutImage}
           alt='man-handshaking-with-other-people'
         />
       </HStack>
-      <Image className='tw-absolute tw-bottom-0 tw-right-0' src={LinePattern} alt='line-pattern'/>
+      <Image
+        className='tw-absolute tw-bottom-0 tw-right-0'
+        src={LinePattern}
+        alt='line-pattern'
+      />
     </section>
   );
 }

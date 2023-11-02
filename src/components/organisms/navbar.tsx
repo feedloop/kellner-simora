@@ -10,27 +10,34 @@ import { COLOR_PRIMARY } from '@/constants/ui';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { isMobile } from 'react-device-detect';
+import { usePathname } from 'next/navigation';
+import { twMerge } from 'tailwind-merge';
 
 function Navbar() {
   const { scrollY } = useScroll();
+  const path = usePathname();
   const opacity = useTransform(scrollY, [0, 100], [0, 1]);
-  
 
   return (
-    <motion.nav className='tw-flex tw-fixed tw-top-0 tw-left-0 tw-w-full tw-items-center tw-justify-between md:tw-px-20 tw-px-4 tw-py-[.875rem] tw-z-20'>
+    <motion.nav
+      className={twMerge(
+        `tw-fixed tw-left-0 tw-top-0 tw-z-20 tw-flex tw-w-full tw-items-center tw-justify-between tw-px-4 tw-py-[.875rem] sm:tw-px-20`,
+        path !== '/' && 'tw-sticky'
+      )}
+    >
       <motion.div
         style={{ opacity }}
-        className='tw-absolute tw-top-0 tw-left-0 tw-w-full tw-h-full tw-bg-white tw-z-10'
+        className='tw-absolute tw-left-0 tw-top-0 tw-z-10 tw-h-full tw-w-full tw-bg-white'
       />
-      <span className='tw-flex tw-relative tw-z-20 tw-items-center tw-gap-5'>
-        <Link href={'/'} className='tw-bg-white tw-rounded-xl tw-p-3'>
+      <span className='tw-relative tw-z-20 tw-flex tw-items-center tw-gap-5'>
+        <Link href={'/'} className='tw-rounded-xl tw-bg-white tw-p-3'>
           <Image src={Brand} alt='brand-logo' />
         </Link>
         <Link
           href={'/'}
           fontSize={'sm'}
           fontWeight={'semibold'}
-          className='tw-hidden md:tw-block'
+          className='tw-hidden sm:tw-block'
           _hover={{ color: 'primary.500' }}
         >
           Beranda
@@ -38,26 +45,22 @@ function Navbar() {
         <Dropdown
           label='Tentang Kami'
           items={NavDropdownItem}
-          className='tw-hidden md:tw-block'
+          className='tw-hidden sm:tw-block'
         />
       </span>
       <Button
         textColor={'white'}
         style={{ backgroundColor: COLOR_PRIMARY }}
-        className='tw-hidden md:tw-block tw-z-10'
+        className='tw-z-10 tw-hidden sm:tw-block'
       >
         Hubungi
       </Button>
-      <Button
-        as={motion.button}
-        fontSize={'lg'}
-        variant={'ghost'}
-        _hover={{ color: 'primary.500', backgroundColor: 'white' }}
-        style={{color:isMobile ? COLOR_PRIMARY : 'white'}}
-        className='tw-block md:tw-hidden tw-relative tw-z-20'
+      <button
+        style={{ color: COLOR_PRIMARY }}
+        className='tw-relative tw-z-10 tw-block tw-text-xl sm:tw-hidden'
       >
         <GiHamburgerMenu />
-      </Button>
+      </button>
     </motion.nav>
   );
 }

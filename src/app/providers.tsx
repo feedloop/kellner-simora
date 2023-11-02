@@ -1,7 +1,7 @@
 'use client';
 
 import { CacheProvider } from '@chakra-ui/next-js';
-import { ChakraProvider, extendTheme } from '@chakra-ui/react';
+import { ChakraProvider, extendTheme, theme } from '@chakra-ui/react';
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const colors = {
@@ -19,7 +19,7 @@ export function Providers({ children }: { children: React.ReactNode }) {
     },
   };
 
-  const theme = extendTheme({
+  const customTheme = extendTheme({
     colors,
     components: {
       Button: {
@@ -36,12 +36,30 @@ export function Providers({ children }: { children: React.ReactNode }) {
           },
         },
       },
+      Input: {
+        variants: {
+          outline: () => ({
+            ...theme.components.Input.variants?.outline,
+            field: {
+              bg: "white",
+              border: "1px solid",
+              borderColor: "gray.300",
+              boxShadow:"sm",
+              _focusVisible: {
+                borderColor: "primary.300",
+                boxShadow: "none",
+                zIndex: 1,
+              },
+            },
+          }),
+        },
+      }
     },
   });
 
   return (
     <CacheProvider>
-      <ChakraProvider theme={theme}>{children}</ChakraProvider>
+      <ChakraProvider theme={customTheme}>{children}</ChakraProvider>
     </CacheProvider>
   );
 }
