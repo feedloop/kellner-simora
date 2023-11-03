@@ -30,7 +30,7 @@ function PricingCard({
   item = [],
 }: PricingCardType) {
   return (
-    <Card maxW={'24rem'} w={'33%'}>
+    <Card maxW={{sm:'24rem'}} w={{sm:'33%'}}>
       <CardHeader>
         <Text
           fontSize={head.length > 20 ? '1.25rem' : '1.5rem'}

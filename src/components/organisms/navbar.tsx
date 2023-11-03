@@ -45,13 +45,14 @@ function Navbar() {
         <Dropdown
           label='Tentang Kami'
           items={NavDropdownItem}
-          className='tw-hidden sm:tw-block'
+          display={{base:"none",sm:"block"}}
         />
       </span>
       <Button
         textColor={'white'}
         style={{ backgroundColor: COLOR_PRIMARY }}
-        className='tw-z-10 tw-hidden sm:tw-block'
+        display={{base:"none",sm:"block"}}
+        className='tw-z-10'
       >
         Hubungi
       </Button>

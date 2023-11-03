@@ -3,13 +3,23 @@ import {
   COLOR_PRIMARY_LIGHTER,
   COLOR_PRIMARY_TEXT,
 } from '@/constants/ui';
-import { Button, HStack, Heading, Text } from '@chakra-ui/react';
+import { Box, Button, HStack, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
 
 function PitchSection() {
   return (
-    <section className='tw-px-[7rem] tw-pb-[6rem] tw-relative'>
-      <HStack alignItems={'center'} justifyContent={'space-between'} borderRadius={'1rem'} p={'4rem'} bgColor={COLOR_PRIMARY_LIGHTER}>
+    <section className='tw-relative tw-px-[1rem] tw-pb-[4rem] sm:tw-pb-[6rem] sm:tw-px-[7rem]'>
+      <Box
+        display={'flex'}
+        flexDir={{ base: 'column', sm: 'row' }}
+        alignItems={'center'}
+        justifyContent={'space-between'}
+        borderRadius={'1rem'}
+        px={{ base: '1.5rem', sm: 0 }}
+        py={{ base: '2.5rem', sm: 0 }}
+        p={{ sm: '4rem' }}
+        bgColor={COLOR_PRIMARY_LIGHTER}
+      >
         <div>
           <Heading
             as={'h2'}
@@ -22,7 +32,7 @@ function PitchSection() {
           </Heading>
           <Text
             lineHeight={'1.875rem'}
-            fontSize={'1.25rem'}
+            fontSize={{ base: '1.125rem', sm: '1.25rem' }}
             color={'white'}
             fontWeight={400}
             mt={'1rem'}
@@ -30,11 +40,19 @@ function PitchSection() {
             Ikuti jejak 100+ orang yang telah berhasil meraih mimpinya
           </Text>
         </div>
-        <HStack gap={'.75rem'}>
+        <Box
+          mt={{base:"2rem",sm:0}}
+          display={'flex'}
+          flexDir={{ base: 'column-reverse', sm: 'row' }}
+          gap={'.75rem'}
+          w={{base:"full",sm:'fit-content'}}
+          alignItems={{base:"stretch"}}
+        >
           <Button
             color={COLOR_PRIMARY_TEXT}
             colorScheme='whiteAlpha'
             style={{ background: 'white' }}
+            w={{base:"full", sm:"fit-content"}}
           >
             Pelajari Layanan
           </Button>
@@ -42,11 +60,12 @@ function PitchSection() {
             color={'white'}
             colorScheme='primary'
             style={{ background: COLOR_PRIMARY }}
+            w={{base:"full", sm:"fit-content"}}
           >
             Daftar
           </Button>
-        </HStack>
-      </HStack>
+        </Box>
+      </Box>
     </section>
   );
 }

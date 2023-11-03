@@ -12,10 +12,10 @@ import { LinePattern } from '@/assets/svgs';
 
 function AboutSection() {
   return (
-    <section className='tw-relative tw-px-[7rem] tw-py-[6rem]'>
+    <section className='tw-relative tw-px-[1rem] sm:tw-px-[7rem] tw-py-[4rem] sm:tw-py-[6rem]'>
       <div>
         <Text
-          fontSize={'1rem'}
+          fontSize={{base:".875rem", sm:'1rem'}}
           fontWeight={'semibold'}
           lineHeight={'1.5rem'}
           color={'primary.500'}
@@ -24,25 +24,25 @@ function AboutSection() {
         </Text>
         <Heading
           as={'h2'}
-          fontSize={'2.25rem'}
+          fontSize={{base:'1.875rem', sm:'2.25rem'}}
           fontWeight={'semibold'}
           lineHeight={'2.75rem'}
           mt={'.75rem'}
-          mb={'1.25rem'}
+          mb={{base:"1rem", sm:'1.25rem'}}
         >
           Berpengalaman lebih dari 5 tahun
         </Heading>
         <Text
-          lineHeight={'1.875rem'}
-          fontSize={'1.25rem'}
+          lineHeight={{base:'1.75rem', sm:'1.875rem'}}
+          fontSize={{base:'1.125rem', sm:'1.25rem'}}
           color={COLOR_TEXT}
-          maxW={'80%'}
+          maxW={{sm:'80%'}}
         >
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
           dictum neque ut scelerisque blandit. Maecenas hendrerit purus leo
         </Text>
       </div>
-      <HStack mt={'5.375rem'}>
+      <HStack px={{base:'.5rem',sm:0}} mt={{base:"3rem", sm:'5.375rem'}}>
         <VStack gap={'3rem'}>
           {AboutListItem.map((item) => (
             <HStack key={crypto.randomUUID()} alignItems={'start'}>
@@ -51,7 +51,7 @@ function AboutSection() {
                 <Text
                   fontWeight={'semibold'}
                   color={COLOR_GRAY_900}
-                  fontSize={'1.25rem'}
+                  fontSize={{base:'1.125rem', sm:'1.25rem'}}
                 >
                   {item.head}
                 </Text>
@@ -69,13 +69,13 @@ function AboutSection() {
           ))}
         </VStack>
         <Image
-          className='tw-relative tw-z-10 tw-w-1/2'
+          className='tw-relative tw-hidden sm:tw-block tw-z-10 tw-w-1/2'
           src={AboutImage}
           alt='man-handshaking-with-other-people'
         />
       </HStack>
       <Image
-        className='tw-absolute tw-bottom-0 tw-right-0'
+        className='tw-absolute tw-hidden sm:tw-block tw-bottom-0 tw-right-0'
         src={LinePattern}
         alt='line-pattern'
       />
