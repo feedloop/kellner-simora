@@ -37,10 +37,10 @@ function Footer() {
               <Link color={COLOR_TEXT} href={Routes.Field}>
                 Bidang Usaha
               </Link>
-              <Link color={COLOR_TEXT} href={Routes.Field}>
+              <Link color={COLOR_TEXT} href={Routes.WhyUs}>
                 Mengapa Kelner
               </Link>
-              <Link color={COLOR_TEXT} href={Routes.Field}>
+              <Link color={COLOR_TEXT} href={Routes.Contact}>
                 Kontak Kami
               </Link>
             </div>
