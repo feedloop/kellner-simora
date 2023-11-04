@@ -6,6 +6,7 @@ import {
   COLOR_TEXT,
 } from '@/constants/ui';
 import {
+  Box,
   Button,
   FormControl,
   FormLabel,
@@ -21,17 +22,25 @@ import React from 'react';
 
 function FormSection() {
   return (
-    <div className='tw-flex tw-justify-between tw-p-24'>
-      <Image src={ContactImage} alt='man-holding-phone' className='tw-w-1/2' />
-      <div className='tw-px-[3rem] tw-py-[3.25rem]'>
+    <div className='tw-flex tw-justify-between tw-px-[1rem] tw-py-[4rem] sm:tw-p-24'>
+      <Image
+        src={ContactImage}
+        alt='man-holding-phone'
+        className='tw-hidden tw-w-1/2 sm:tw-block'
+      />
+      <div className='sm:tw-px-[3rem] sm:tw-py-[3.25rem]'>
         <Heading lineHeight={'2.75rem'} pb={'1.25rem'}>
           Kontak Kami
         </Heading>
         <Text fontSize={'1.25rem'} color={COLOR_GRAY_500}>
           Our friendly team would love to hear from you.
         </Text>
-        <VStack pt={'3rem'} gap={'1.5rem'} alignItems={"stretch"}>
-          <HStack>
+        <VStack pt={'3rem'} gap={'1.5rem'} alignItems={'stretch'}>
+          <Box
+            display={'flex'}
+            gap={{ base: '1.5rem' }}
+            flexDir={{ base: 'column', sm: 'row' }}
+          >
             <FormControl>
               <FormLabel color={COLOR_TEXT}>Nama anda</FormLabel>
               <Input type='text' />
@@ -40,7 +49,7 @@ function FormSection() {
               <FormLabel color={COLOR_TEXT}>Email</FormLabel>
               <Input type='email' />
             </FormControl>
-          </HStack>
+          </Box>
           <FormControl>
             <FormLabel color={COLOR_TEXT}>Telepon (opsional)</FormLabel>
             <Input type='number' />
@@ -66,7 +75,11 @@ function FormSection() {
               size='sm'
             />
           </FormControl>
-          <Button size={"lg"} colorScheme='primary' style={{ background: COLOR_PRIMARY }}>
+          <Button
+            size={'lg'}
+            colorScheme='primary'
+            style={{ background: COLOR_PRIMARY }}
+          >
             Kirim
           </Button>
         </VStack>

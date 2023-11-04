@@ -22,7 +22,7 @@ function FaqSection() {
   );
 
   return (
-    <section className='tw-relative tw-px-[7rem]'>
+    <section className='tw-relative tw-px-[1rem] sm:tw-px-[7rem]'>
       <Heading as={'h2'} fontWeight={'semibold'} textAlign={'center'}>
         Pertanyaan
       </Heading>
@@ -41,7 +41,7 @@ function FaqSection() {
             { scroll: false }
           )
         }
-        w={'48rem'}
+        w={{sm:'48rem'}}
         mx={'auto'}
         allowToggle
       >

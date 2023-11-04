@@ -8,7 +8,7 @@ import { FieldItems } from '@/constants/lists';
 function Field() {
   return (
     <Template>
-      <section className='tw-w-full tw-px-[7rem] tw-py-[6rem]'>
+      <section className='tw-w-full tw-px-[1rem] sm:tw-px-[7rem] tw-py-[6rem]'>
         <VStack className='tw-text-center'>
           <Text color={'primary.500'} fontWeight={'semibold'}>
             Tentang Kami
@@ -16,7 +16,7 @@ function Field() {
           <Heading
             as={'h2'}
             fontWeight={'semibold'}
-            fontSize={'3rem'}
+            fontSize={{base:'2.25rem', sm:'3rem'}}
             lineHeight={'2.75rem'}
             letterSpacing={'-2%'}
           >
@@ -25,7 +25,7 @@ function Field() {
           <Text
             color={COLOR_TEXT}
             fontSize={'1.25rem'}
-            maxW={'60%'}
+            maxW={{sm:'60%'}}
             mx={'auto'}
           >
             We have offices and teams all around the world.

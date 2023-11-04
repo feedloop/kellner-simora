@@ -9,7 +9,6 @@ import { NavDropdownItem } from '@/constants/lists';
 import { COLOR_PRIMARY } from '@/constants/ui';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { isMobile } from 'react-device-detect';
 import { usePathname } from 'next/navigation';
 import { twMerge } from 'tailwind-merge';
 

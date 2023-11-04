@@ -10,8 +10,8 @@ import { LinePattern } from '@/assets/svgs';
 
 function BenefitSection() {
   return (
-    <section className='tw-relative tw-w-full tw-px-[7rem] tw-pb-[6rem]'>
-      <HStack mt={'5.375rem'}>
+    <section className='tw-relative tw-w-full tw-px-[1rem] tw-pb-[6rem] sm:tw-px-[7rem]'>
+      <HStack mt={{ base: '3rem', sm: '5.375rem' }}>
         <VStack gap={'3rem'}>
           {AboutListItem.map((item) => (
             <HStack key={crypto.randomUUID()} alignItems={'start'}>
@@ -20,7 +20,7 @@ function BenefitSection() {
                 <Text
                   fontWeight={'semibold'}
                   color={COLOR_GRAY_900}
-                  fontSize={'1.25rem'}
+                  fontSize={{ base: '1.125rem', sm: '1.25rem' }}
                 >
                   {item.head}
                 </Text>
@@ -38,13 +38,13 @@ function BenefitSection() {
           ))}
         </VStack>
         <Image
-          className='tw-relative tw-z-10 tw-w-1/2'
+          className='tw-relative tw-z-10 tw-hidden tw-w-1/2 sm:tw-block'
           src={AboutImage}
           alt='man-handshaking-with-other-people'
         />
       </HStack>
       <Image
-        className='tw-absolute tw-bottom-0 tw-right-0'
+        className='tw-absolute tw-hidden sm:tw-block tw-bottom-0 tw-right-0'
         src={LinePattern}
         alt='line-pattern'
       />
