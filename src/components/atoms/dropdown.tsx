@@ -34,6 +34,7 @@ function Dropdown({ label, items, icon = <BiChevronDown />,...props }: DropdownT
       <Menu isOpen={isOpen}>
         <MenuButton
           onMouseEnter={onOpen}
+          onClick={()=>isOpen ? onClose() : onOpen()}
           fontSize={'sm'}
           _active={{ border: 'none' }}
           as={Button}

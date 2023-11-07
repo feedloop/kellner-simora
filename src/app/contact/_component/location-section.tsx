@@ -24,7 +24,7 @@ function LocationSection() {
         textAlign={'center'}
         lineHeight={'1.875rem'}
       >
-        We have offices and teams all around the world.
+        Our Locations Span the Globe, Visit Our Offices for Further Information.
       </Text>
       <div className='tw-mt-[4rem] tw-w-full sm:tw-mt-[6rem]'>
         <iframe
@@ -37,7 +37,7 @@ function LocationSection() {
           referrerPolicy='no-referrer-when-downgrade'
         ></iframe>
       </div>
-      <div className='tw-flex tw-flex-col tw-items-center tw-justify-center tw-gap-4 tw-pt-[3rem] tw-pb-0 sm:tw-py-[4rem]'>
+      <div className='tw-flex tw-flex-col tw-items-center tw-justify-center tw-gap-4 tw-pb-0 tw-pt-[3rem] sm:tw-py-[4rem]'>
         <Image src={Location} alt='location-marker' />
         <div className='tw-text-center'>
           <Text
@@ -53,7 +53,7 @@ function LocationSection() {
           textAlign={'center'}
           color={'primary.500'}
           fontWeight={'semibold'}
-          maxW={{sm:'30%'}}
+          maxW={{ sm: '30%' }}
         >
           {HQ_ADDRESS}
         </Text>

@@ -5,6 +5,7 @@ import { Accordion, Divider, Heading, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
 import FaqItem from './faq-item';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
+import { faqs } from '@/constants/lists';
 
 function FaqSection() {
   const { push } = useRouter();
@@ -41,7 +42,7 @@ function FaqSection() {
             { scroll: false }
           )
         }
-        w={{sm:'48rem'}}
+        w={{ sm: '48rem' }}
         mx={'auto'}
         allowToggle
       >
@@ -50,8 +51,14 @@ function FaqSection() {
           alignItems={'center'}
           justifyContent={'center'}
         >
-          <FaqItem index={0}/>
-          <FaqItem index={1}/>
+          {faqs.map((item, index) => (
+            <FaqItem
+              index={index}
+              key={crypto.randomUUID()}
+              answer={item.answer}
+              question={item.question}
+            />
+          ))}
         </VStack>
       </Accordion>
     </section>

@@ -27,10 +27,12 @@ function IntroSection() {
         <Text
           color={COLOR_TEXT}
           fontSize={{ base: '1.125rem', sm: '1.25rem' }}
-          maxW={{ sm: '60%' }}
+          maxW={{ sm: '80%' }}
           mx={'auto'}
         >
-          We have offices and teams all around the world.
+          We believe that Indonesia has a big role to play in making our world a
+          better place to live in. With Indonesian values, natural resources and
+          as well as Indonesian talents.
         </Text>
       </VStack>
       <Box
@@ -48,22 +50,21 @@ function IntroSection() {
           maxW={{ sm: '50%' }}
         >
           <Text lineHeight={{ base: '1.5rem', sm: '1.75rem' }}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
-            libero reprehenderit perspiciatis maiores mollitia molestiae ad
-            autem ipsam nisi facilis? Rem eligendi, sunt exercitationem ipsa
-            vitae veritatis voluptatibus ad enim?
+            We also believe that talents are forged through times, experience
+            and skills. The process of forging and enabling Indonesian talents
+            with industry mission-fit, digital-fit, global-fit skills is an
+            approach we, at Kellner Simora, is endeavoring to solve a major
+            problem that Indonesia has today, lack of world-class talents. We
+            believe these world-class talents, uniquely with Indonesian values,
+            are the ones that will lead Indonesian and global companies. Our
+            mission is to forge Indonesian talents to be world-class leaders
           </Text>
           <Text lineHeight={{ base: '1.5rem', sm: '1.75rem' }}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
-            libero reprehenderit perspiciatis maiores mollitia molestiae ad
-            autem ipsam nisi facilis? Rem eligendi, sunt exercitationem ipsa
-            vitae veritatis voluptatibus ad enim?
-          </Text>
-          <Text lineHeight={{ base: '1.5rem', sm: '1.75rem' }}>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi
-            libero reprehenderit perspiciatis maiores mollitia molestiae ad
-            autem ipsam nisi facilis? Rem eligendi, sunt exercitationem ipsa
-            vitae veritatis voluptatibus ad enim?
+            We have witnessed as well, the acceleration of growth can happen
+            in the company with professional hires that comes from outside the
+            company . These type of talents are needed in certain situations,
+            whereby , it is very important to quickly infuse talents into the
+            organization to fulfill the demand.
           </Text>
         </Box>
       </Box>

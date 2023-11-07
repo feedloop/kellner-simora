@@ -28,7 +28,7 @@ function Field() {
             maxW={{sm:'60%'}}
             mx={'auto'}
           >
-            We have offices and teams all around the world.
+            Kellner Simora International have 2 main services to be offered to Indonesian companies and talents.
           </Text>
         </VStack>
       </section>
