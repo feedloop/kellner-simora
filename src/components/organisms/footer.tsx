@@ -16,14 +16,14 @@ import React from 'react';
 function Footer() {
   return (
     <footer style={{ backgroundColor: COLOR_SNOW_LIGHTEST }}>
-      <section className='tw-flex tw-flex-col sm:tw-flex-row tw-px-[1rem] tw-py-[4rem] sm:tw-px-[7rem]'>
+      <section className='tw-flex tw-flex-col tw-px-[1rem] tw-py-[4rem] sm:tw-flex-row sm:tw-px-[7rem]'>
         <div className='sm:tw-w-[50%]'>
           <Image src={FullLogo} alt='full-logo-brand' />
           <Text color={COLOR_TEXT} lineHeight={'24px'} mt={'2rem'}>
             {COMPANY_NAME}
           </Text>
         </div>
-        <div className='tw-flex tw-justify-between sm:tw-justify-start tw-w-full tw-gap-[2rem] sm:tw-gap-[18rem] tw-mt-[3rem]'>
+        <div className='tw-mt-[3rem] tw-flex tw-w-full tw-justify-between tw-gap-[2rem] sm:tw-mt-0 sm:tw-justify-start sm:tw-gap-[18rem]'>
           <div className='tw-font-semibold'>
             <Text
               fontSize={'sm'}
@@ -34,14 +34,11 @@ function Footer() {
               Sitemap
             </Text>
             <div className='tw-flex tw-flex-col tw-gap-3'>
-              <Link color={COLOR_TEXT} href={Routes.Field}>
-                Bidang Usaha
-              </Link>
               <Link color={COLOR_TEXT} href={Routes.WhyUs}>
-                Mengapa Kelner
+                Mengapa Kellner
               </Link>
               <Link color={COLOR_TEXT} href={Routes.Contact}>
-                Kontak Kami
+                Kontak kami
               </Link>
             </div>
           </div>
@@ -55,31 +52,22 @@ function Footer() {
               Layanan Kami
             </Text>
             <div className='tw-flex tw-flex-col tw-gap-3'>
-              <Link color={COLOR_TEXT} href={Routes.Field}>
-                Kursus Bahasa Jerman
+              <Link color={COLOR_TEXT} href={'#'}>
+                Layanan Pengembangan Talenta
               </Link>
-              <Link color={COLOR_TEXT} href={Routes.Field}>
-                Kursus Bahasa Inggris
+              <Link color={COLOR_TEXT} href={'#'}>
+                Layanan Pengembangan Perusahaan
               </Link>
-              <Link color={COLOR_TEXT} href={Routes.Field}>
-                Bimbingan Belajar
-              </Link>
-              <Link color={COLOR_TEXT} href={Routes.Field}>
-                Penempatan Kerja
-              </Link>
-              <Link color={COLOR_TEXT} href={Routes.Field}>
-                Internship
-              </Link>
-              <Link color={COLOR_TEXT} href={Routes.Recruitment}>
-                Kuliah sambil Kerja
+              <Link color={COLOR_TEXT} href={'#'}>
+                Layanan Penempatan Talenta
               </Link>
             </div>
           </div>
         </div>
       </section>
       <Divider w={'80%'} mx={'auto'} />
-      <section className='tw-flex tw-flex-col-reverse tw-gap-[1.5rem] tw-items-center tw-justify-between tw-px-[1rem] sm:tw-px-[7rem] tw-py-[3rem]'>
-        <Text color={COLOR_TEXT} textAlign={{base:'center',sm:'left'}}>
+      <section className='tw-flex tw-flex-col-reverse tw-items-center tw-justify-between tw-gap-[1.5rem] tw-px-[1rem] tw-py-[3rem] sm:tw-flex-row sm:tw-px-[7rem]'>
+        <Text color={COLOR_TEXT} textAlign={{ base: 'center', sm: 'left' }}>
           &copy; 2023 {COMPANY_NAME}. All right reserved.{' '}
         </Text>
         <HStack gap={'1.5rem'}>

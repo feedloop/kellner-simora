@@ -1,39 +1,44 @@
-import { HeroImage } from '@/assets/images';
-import {
-  COLOR_PRIMARY,
-  COLOR_PRIMARY_LIGHTER,
-  COLOR_PRIMARY_TEXT,
-} from '@/constants/ui';
-import { Box, Button, HStack, Heading, Text } from '@chakra-ui/react';
+import { WomenHeroSection } from '@/assets/images';
+import { CirclePatternLeft, CirclePatternRight } from '@/assets/svgs';
+import { COLOR_SECONDARY, COLOR_PRIMARY } from '@/constants/ui';
+import { Box, Button, Heading, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react';
 
 function HeroSection() {
   return (
     <section
-      style={{ backgroundColor: COLOR_PRIMARY_LIGHTER }}
-      className='tw-relative tw-flex tw-min-h-screen tw-w-full tw-flex-col tw-justify-center tw-pb-[4rem] sm:tw-pb-0 tw-px-[1rem] sm:tw-px-[7rem]'
+      style={{ backgroundColor: COLOR_PRIMARY }}
+      className='tw-relative tw-flex tw-min-h-screen tw-w-full tw-flex-col tw-justify-center tw-px-[1rem] tw-pb-[4rem] sm:tw-px-[7rem] sm:tw-pb-0'
     >
-      <Image
-        src={HeroImage}
-        alt='big-hero-img'
-        className='tw-absolute tw-right-0 tw-top-0 tw-w-[75%] sm:tw-w-1/2'
-      />
-      <div className='tw-relative tw-z-10 tw-pt-44 sm:tw-pt-0'>
+      <div className=' tw-absolute tw-left-0 tw-right-0 tw-flex tw-justify-end md:tw-justify-between'>
+        <Image
+          src={CirclePatternLeft}
+          alt='circle-pattern-left'
+          className='tw-hidden tw-w-auto md:tw-block md:tw-w-1/4'
+        />
+        <Image
+          src={CirclePatternRight}
+          alt='circle-pattern-right '
+          className='tw-w-auto md:tw-w-1/3'
+        />
+      </div>
+
+      <div className='tw-relative tw-z-10 tw-pt-20 sm:tw-pt-0'>
         <Text
           fontSize={{ base: '.875rem', sm: '1.5rem' }}
           color={'white'}
           fontWeight={700}
         >
-          Kellner'S
+          Kellner Simora International
         </Text>
         <Heading
           fontSize={{ base: '2.25rem', sm: '4.5rem' }}
           color={'white'}
           lineHeight={{ base: '2.75rem', sm: '4.84375rem' }}
-          maxW={'37.5rem'}
+          maxW={'47.5rem'}
         >
-          Bukan mimpi, semua bisa ke Eropa!
+          Membangun Talenta & Organisasi Kelas Dunia untuk Indonesia
         </Heading>
         <Text
           mt={{ base: '1rem', sm: '1.5rem' }}
@@ -49,23 +54,20 @@ function HeroSection() {
           mt={{ base: '2rem', sm: '3rem' }}
         >
           <Button
-            color={COLOR_PRIMARY_TEXT}
-            size={{base:'md', sm:'lg'}}
+            color='white'
+            size={{ base: 'md', sm: 'lg' }}
             colorScheme='whiteAlpha'
-            style={{ background: 'white' }}
+            style={{ background: COLOR_SECONDARY }}
           >
             Kenali Kami
           </Button>
-          <Button
-            color={'white'}
-            size={{base:'md', sm:'lg'}}
-            colorScheme='primary'
-            style={{ background: COLOR_PRIMARY }}
-          >
-            Daftar
-          </Button>
         </Box>
       </div>
+      <Image
+        src={WomenHeroSection}
+        alt='big-hero-img'
+        className='tw-absolute tw-bottom-0 tw-right-5 tw-z-[1] tw-hidden tw-w-1/2 sm:tw-w-[40%] md:tw-hidden md:tw-w-[40%]  lg:tw-block'
+      />
     </section>
   );
 }

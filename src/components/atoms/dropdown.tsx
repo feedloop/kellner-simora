@@ -18,6 +18,10 @@ export type DropdownItemType = {
   label: string | ReactNode;
   url: string;
 };
+export type DropdownOurPrograms = {
+  label: string | ReactNode;
+  url: string;
+};
 
 type DropdownType = {
   icon?: ReactElement;
@@ -25,16 +29,21 @@ type DropdownType = {
   items: DropdownItemType[];
 };
 
-function Dropdown({ label, items, icon = <BiChevronDown />,...props }: DropdownType & MenuButtonProps) {
+function Dropdown({
+  label,
+  items,
+  icon = <BiChevronDown />,
+  ...props
+}: DropdownType & MenuButtonProps) {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const {push} = useRouter();
+  const { push } = useRouter();
 
   return (
     <Box>
       <Menu isOpen={isOpen}>
         <MenuButton
           onMouseEnter={onOpen}
-          onClick={()=>isOpen ? onClose() : onOpen()}
+          onClick={() => (isOpen ? onClose() : onOpen())}
           fontSize={'sm'}
           _active={{ border: 'none' }}
           as={Button}
@@ -49,7 +58,7 @@ function Dropdown({ label, items, icon = <BiChevronDown />,...props }: DropdownT
             <MenuItem
               key={crypto.randomUUID()}
               _hover={{ backgroundColor: 'primary.50', textDecor: 'none' }}
-              onClick={()=>push(item.url)}
+              onClick={() => push(item.url)}
             >
               {item.label}
             </MenuItem>

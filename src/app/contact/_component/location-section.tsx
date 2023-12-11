@@ -1,6 +1,6 @@
 import { Location } from '@/assets/svgs';
 import { HQ_ADDRESS } from '@/constants/misc';
-import { COLOR_PRIMARY, COLOR_TEXT } from '@/constants/ui';
+import { COLOR_TEXT } from '@/constants/ui';
 import { Heading, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react';
@@ -28,7 +28,7 @@ function LocationSection() {
       </Text>
       <div className='tw-mt-[4rem] tw-w-full sm:tw-mt-[6rem]'>
         <iframe
-          src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d75864.58760922217!2d86.90512291016583!3d27.987127260012382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39e854a215bd9ebd%3A0x576dcf806abbab2!2sMt%20Everest!5e0!3m2!1sen!2sid!4v1698893040740!5m2!1sen!2sid'
+          src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.789060299664!2d106.79484562387792!3d-6.291431561576201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f116d10f7ccd%3A0xd0e056cd9cab3a31!2svOffice%20-%20The%20CEO%20Building%20(Virtual%20Office%20%7C%20Serviced%20Office%20%7C%20Meeting%20Room)!5e0!3m2!1sen!2sid!4v1702333841547!5m2!1sen!2sid'
           width='100%'
           height={isMobile ? '320' : '450'}
           style={{ border: 0 }}

@@ -1,12 +1,11 @@
 'use client';
 
 import { Brand } from '@/assets/svgs';
-import { Button, Link } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react';
 import Dropdown from '../atoms/dropdown';
-import { NavDropdownItem } from '@/constants/lists';
-import { COLOR_PRIMARY } from '@/constants/ui';
+import { NavDropdownItem, NavDropdownOurPrograms } from '@/constants/lists';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { usePathname } from 'next/navigation';
@@ -44,19 +43,16 @@ function Navbar() {
         <Dropdown
           label='Tentang Kami'
           items={NavDropdownItem}
-          display={{base:"none",sm:"block"}}
+          display={{ base: 'none', sm: 'block' }}
         />
+        {/* <Dropdown
+          label='Program Kami'
+          items={NavDropdownOurPrograms}
+          display={{ base: 'none', sm: 'block' }}
+        /> */}
       </span>
-      <Button
-        textColor={'white'}
-        style={{ backgroundColor: COLOR_PRIMARY }}
-        display={{base:"none",sm:"block"}}
-        className='tw-z-10'
-      >
-        Hubungi
-      </Button>
       <button
-        style={{ color: COLOR_PRIMARY }}
+        style={{ color: 'white' }}
         className='tw-relative tw-z-10 tw-block tw-text-xl sm:tw-hidden'
       >
         <GiHamburgerMenu />

@@ -1,4 +1,7 @@
-import { PricingCardType } from '@/app/_components/pricing-card';
+import {
+  PricingCardType,
+  TestimonialType,
+} from '@/app/_components/pricing-card';
 import { FieldItemType } from '@/app/field/_components/field-item';
 import {
   Avatar,
@@ -21,7 +24,10 @@ import {
   PeaceSignFooter,
   TwitterFooter,
 } from '@/assets/svgs';
-import { DropdownItemType } from '@/components/atoms/dropdown';
+import {
+  DropdownItemType,
+  DropdownOurPrograms,
+} from '@/components/atoms/dropdown';
 import { Image } from '@/types/misc';
 import { Text } from '@chakra-ui/react';
 
@@ -40,6 +46,20 @@ export const NavDropdownItem: DropdownItemType[] = [
   },
   {
     label: <span>Kontak Kami</span>,
+    url: '/contact',
+  },
+];
+export const NavDropdownOurPrograms: DropdownOurPrograms[] = [
+  {
+    label: <span>Talent Development Services</span>,
+    url: '/why-us',
+  },
+  {
+    label: <span>Corporate Development Services</span>,
+    url: '/field',
+  },
+  {
+    label: <span>Talent Placement Services</span>,
     url: '/contact',
   },
 ];
@@ -66,11 +86,11 @@ export const AboutListItem = [
 ];
 
 export const SocialFooter: SocialFooterType[] = [
-  {
-    image: TwitterFooter,
-    alt: 'twitter-social-footer',
-    link: '/',
-  },
+  // {
+  //   image: TwitterFooter,
+  //   alt: 'twitter-social-footer',
+  //   link: '/',
+  // },
   {
     image: LinkedinFooter,
     alt: 'linkedin-social-footer',
@@ -81,62 +101,80 @@ export const SocialFooter: SocialFooterType[] = [
     alt: 'facebook-social-footer',
     link: '/',
   },
-  {
-    image: GithubFooter,
-    alt: 'github-social-footer',
-    link: '/',
-  },
-  {
-    image: PeaceSignFooter,
-    alt: 'peace-sign-social-footer',
-    link: '/',
-  },
-  {
-    image: BasketFooter,
-    alt: 'basket-social-footer',
-    link: '/',
-  },
+  // {
+  //   image: GithubFooter,
+  //   alt: 'github-social-footer',
+  //   link: '/',
+  // },
+  // {
+  //   image: PeaceSignFooter,
+  //   alt: 'peace-sign-social-footer',
+  //   link: '/',
+  // },
+  // {
+  //   image: BasketFooter,
+  //   alt: 'basket-social-footer',
+  //   link: '/',
+  // },
 ];
 
 export const PricingItems: PricingCardType[] = [
   {
-    buttonLabel: 'Daftar Kursus',
-    head: 'Talent Development Services',
-    headDesc: 'Solusi terintegrasi untuk mengasah bakat dan keterampilan.',
+    buttonLabel: 'Lihat layanan',
+    head: 'Layanan Pengembangan Talenta',
+    headDesc: 'SSolusi terintegrasi untuk mengasah talenta kelas dunia',
     item: [
-      "Fast-track onboarding for new hires.",
-      "Expert-led role-specific training.",
-      "Covers roles like Sales, HR, Data Analysis.",
-      "World-class skills for companies.",
-      "Includes Sales, Digital Leadership, and HR."
+      'Fast-track onboarding untuk keryawan baru',
+      'Pelatihan yang dipimpin oleh ahli',
+      'Meliputi peran seperti sales, HR, data analysis',
+      'Talenta kelas dunia untuk perusahaan',
+      'Meliputi sales, digital leadership, dan HR',
     ],
   },
   {
-    buttonLabel: 'Lihat Kesempatan',
-    head: 'Corporate Development Services (ISO Training and Consultation Service)',
-    headDesc: 'Providing ISO Training and Consultation for Enhanced Organizational Standards and Excellence',
+    buttonLabel: 'Lihat layanan',
+    head: 'Layanan Pengembangan Perusahaan (Layanan Training & Konsultasi ISO)',
+    headDesc:
+      'Memberikan pelatihan dan konsultasi ISO untuk meningkatkan standar dan keunggulan organisasi.',
     item: [
-      "Achieve international quality standards.",
-      "ISO standards like 9001, 14001.",
-      "Transforms companies for excellence.",
-      "Includes environmental and safety.",
-      "Covers food safety, anti-bribery, more."
+      'Mencapai standar kualitas internasional',
+      'SO standards like 9001, 14001',
+      'Mentransformasi perusahaan menuju keunggulan',
+      'Termasuk lingkungan dan keselamatan',
+      'Meliputi keamanan pangan, anti suap, dan lainnya.',
     ],
   },
   {
-    buttonLabel: 'Lihat Penempatan',
-    head: 'Talent Placement Services',
-    headDesc: 'Connecting Skills with Opportunities, Tailored for Your Success.',
+    buttonLabel: 'Lihat layanan',
+    head: 'Layanan Penempatan Talenta',
+    headDesc:
+      'Menghubungkan talenta dengan berbagai peluang untuk kesuksesan Anda.',
     item: [
-      "External talent for specific roles.",
-      "Integrates with skill development.",
-      "Strengthens candidate capabilities.",
-      "Addresses growing role needs.",
-      "Combines external talent with training."
+      'Talenta untuk berbagai kebutuhan',
+      'Terintegrasi dengan pengembangan keterampilan',
+      'Memperkuat kemampuan kandidat',
+      'Memenuhi kebutuhan yang senantiasa berkembang',
+      'Menggabungkan bakat eksternal dengan pelatihan',
     ],
   },
 ];
-
+export const TestimonialList: TestimonialType[] = [
+  {
+    headDesc:
+      '“Working with Kellner was a great experience for us. They have a team of experts who are knowledgeable and experienced in ISO 27001. They helped us understand the standard and its benefits, and guided us step by step on how to implement it in our organization."',
+    title: 'A local Law Firm company',
+  },
+  {
+    headDesc:
+      '“Kellner is more than just a consultant for ISO 27001. They are a partner who cares about our success and satisfaction. They listened to our needs and challenges, and tailored their service to suit our specific situation."',
+    title: 'A local Tax Consultant company',
+  },
+  {
+    headDesc:
+      '“Kellner is a trusted partner for us in our journey to achieve ISO 27001 certification. They provided us with a comprehensive and customized consultation service that covered all aspects of the standard."',
+    title: 'A local Call Center company',
+  },
+];
 export const FieldItems: FieldItemType[] = [
   {
     buttonLabel: 'Lihat pelatihan',
@@ -231,11 +269,15 @@ export const testimonials = [
 
 export const faqs = [
   {
-    question: "Apakah program kuliah sambil kerja di Kellner's hanya tersedia di Eropa?",
-    answer: "Tidak, program kami tersedia di berbagai lokasi global, memungkinkan peserta untuk mengakses program di berbagai negara."
+    question:
+      "Apakah program kuliah sambil kerja di Kellner's hanya tersedia di Eropa?",
+    answer:
+      'Tidak, program kami tersedia di berbagai lokasi global, memungkinkan peserta untuk mengakses program di berbagai negara.',
   },
   {
-    question: "Apakah ada batasan usia untuk mengikuti program kuliah sambil kerja?",
-    answer: "Tidak ada batasan usia yang ketat. Program ini terbuka untuk berbagai kelompok usia yang ingin menggabungkan studi dengan pengalaman kerja."
-  }
+    question:
+      'Apakah ada batasan usia untuk mengikuti program kuliah sambil kerja?',
+    answer:
+      'Tidak ada batasan usia yang ketat. Program ini terbuka untuk berbagai kelompok usia yang ingin menggabungkan studi dengan pengalaman kerja.',
+  },
 ];
