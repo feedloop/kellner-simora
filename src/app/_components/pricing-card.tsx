@@ -21,6 +21,10 @@ export type PricingCardType = {
   buttonLabel: string;
   buttonEvent?: () => void;
 };
+export type TestimonialType = {
+  headDesc: string;
+  title: string;
+};
 
 function PricingCard({
   buttonEvent,
@@ -30,7 +34,13 @@ function PricingCard({
   item = [],
 }: PricingCardType) {
   return (
-    <Card maxW={{sm:'24rem'}} w={{sm:'33%'}}>
+    <Card
+      maxW={{ sm: '24rem' }}
+      w={{ sm: '33%' }}
+      boxShadow={
+        '0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);'
+      }
+    >
       <CardHeader>
         <Text
           fontSize={head.length > 20 ? '1.25rem' : '1.5rem'}
@@ -59,7 +69,15 @@ function PricingCard({
             </HStack>
           ))}
         </VStack>
-        <HStack position={'absolute'} w={'full'} left={0} bottom={'2rem'} justifyContent={'center'} cursor={'pointer'} mt={'4rem'}>
+        <HStack
+          position={'absolute'}
+          w={'full'}
+          left={0}
+          bottom={'2rem'}
+          justifyContent={'center'}
+          cursor={'pointer'}
+          mt={'4rem'}
+        >
           <Button
             variant={'solid'}
             as={Button}

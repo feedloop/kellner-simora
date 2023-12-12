@@ -1,23 +1,19 @@
 import { CtaImage } from '@/assets/images';
-import {
-  COLOR_PRIMARY,
-  COLOR_PRIMARY_LIGHTER,
-  COLOR_PRIMARY_TEXT,
-} from '@/constants/ui';
-import { Box, Button, HStack, Heading, Text } from '@chakra-ui/react';
+import { COLOR_PRIMARY, COLOR_SECONDARY } from '@/constants/ui';
+import { Box, Button, Heading, Text } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react';
 
 function CtaSection() {
   return (
-    <section className='tw-relative tw-px-[1rem] tw-py-[3rem] sm:tw-py-[4rem] sm:tw-pb-[6rem] sm:tw-px-[7rem]'>
+    <section className='tw-relative tw-px-[1rem] tw-py-[3rem] sm:tw-px-[7rem] sm:tw-py-[4rem] sm:tw-pb-[6rem]'>
       <Box
-        display={"flex"}
+        display={'flex'}
         flexDir={{ base: 'column', sm: 'row' }}
         alignItems={'stretch'}
         justifyContent={'space-between'}
         borderRadius={'1rem'}
-        bgColor={COLOR_PRIMARY_LIGHTER}
+        bgColor={COLOR_SECONDARY}
       >
         <div className='tw-px-[1.5rem] tw-py-[2.5rem] sm:tw-p-16'>
           <Heading
@@ -40,7 +36,7 @@ function CtaSection() {
           </Text>
           <Button
             color={'white'}
-            mt={{base:'2rem', sm:'2.5rem'}}
+            mt={{ base: '2rem', sm: '2.5rem' }}
             colorScheme='primary'
             style={{ background: COLOR_PRIMARY }}
           >
@@ -49,7 +45,7 @@ function CtaSection() {
         </div>
         <Image
           src={CtaImage}
-          className='tw-h-fill tw-rounded-b-2xl sm:tw-rounded-r-2xl tw-object-fill'
+          className='tw-h-fill tw-rounded-b-2xl tw-object-fill sm:tw-rounded-r-2xl'
           alt='woman-smiling-in-conversation'
         />
       </Box>

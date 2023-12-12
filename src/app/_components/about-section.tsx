@@ -8,7 +8,7 @@ import React from 'react';
 import AboutIconItem from './about-icon-item';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { AboutListItem } from '@/constants/lists';
-import { LinePattern } from '@/assets/svgs';
+import { CirclePatternGray } from '@/assets/svgs';
 
 function AboutSection() {
   return (
@@ -74,14 +74,14 @@ function AboutSection() {
           ))}
         </VStack>
         <Image
-          className='tw-relative tw-z-10 tw-hidden tw-w-1/2 sm:tw-block'
+          className='tw-relative tw-z-10 tw-hidden tw-w-1/2 tw-rounded-[32px] sm:tw-block'
           src={AboutImage}
           alt='man-handshaking-with-other-people'
         />
       </HStack>
       <Image
         className='tw-absolute tw-bottom-0 tw-right-0 tw-hidden sm:tw-block'
-        src={LinePattern}
+        src={CirclePatternGray}
         alt='line-pattern'
       />
     </section>

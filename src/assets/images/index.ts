@@ -1,15 +1,16 @@
-export {default as HeroImage} from './HeroImage.webp'
-export {default as AboutImage} from './AboutImage.webp'
-export {default as TestimonialImage} from './TestimonialImage.webp'
-export {default as ContactImage} from './ContactImage.webp'
-export {default as BuildingImage} from './BuildingImage.webp'
-export {default as FieldImageItem1} from './FieldImageItem1.webp'
-export {default as FieldImageItem2} from './FieldImageItem2.webp'
-export {default as ChefImage} from './ChefImage.webp'
-export {default as CtaImage} from './CtaImage.webp'
-export {default as Avatar} from './Avatar.webp'
-export {default as Avatar2} from './Avatar2.webp'
-export {default as Avatar3} from './Avatar3.webp'
-export {default as Avatar4} from './Avatar4.webp'
-export {default as Avatar5} from './Avatar5.webp'
-export {default as Avatar6} from './Avatar6.webp'
+export { default as HeroImage } from './HeroImage.webp';
+export { default as AboutImage } from './AboutImage.webp';
+export { default as TestimonialImage } from './TestimonialImage.webp';
+export { default as ContactImage } from './ContactImage.webp';
+export { default as BuildingImage } from './BuildingImage.webp';
+export { default as FieldImageItem1 } from './FieldImageItem1.webp';
+export { default as FieldImageItem2 } from './FieldImageItem2.webp';
+export { default as WomenHeroSection } from './WomenHeroSection.webp';
+export { default as ChefImage } from './ChefImage.webp';
+export { default as CtaImage } from './CtaImage.webp';
+export { default as Avatar } from './Avatar.webp';
+export { default as Avatar2 } from './Avatar2.webp';
+export { default as Avatar3 } from './Avatar3.webp';
+export { default as Avatar4 } from './Avatar4.webp';
+export { default as Avatar5 } from './Avatar5.webp';
+export { default as Avatar6 } from './Avatar6.webp';

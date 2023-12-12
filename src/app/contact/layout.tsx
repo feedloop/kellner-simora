@@ -16,10 +16,10 @@ export default function AboutLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='id'>
-      <body className={inter.className}>
+    <section lang='id'>
+      <div className={inter.className}>
         <Providers>{children}</Providers>
-      </body>
-    </html>
+      </div>
+    </section>
   );
 }

@@ -1,12 +1,11 @@
 'use client';
 
 import { Brand } from '@/assets/svgs';
-import { Button, Link } from '@chakra-ui/react';
+import { Link } from '@chakra-ui/react';
 import Image from 'next/image';
 import React from 'react';
 import Dropdown from '../atoms/dropdown';
-import { NavDropdownItem } from '@/constants/lists';
-import { COLOR_PRIMARY } from '@/constants/ui';
+import { NavDropdownItem, NavDropdownOurPrograms } from '@/constants/lists';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { usePathname } from 'next/navigation';
@@ -16,6 +15,11 @@ function Navbar() {
   const { scrollY } = useScroll();
   const path = usePathname();
   const opacity = useTransform(scrollY, [0, 100], [0, 1]);
+  const color = useTransform(
+    scrollY,
+    [0, 100],
+    [path !== '/' ? '#000' : '#fff', '#000']
+  );
 
   return (
     <motion.nav
@@ -28,7 +32,7 @@ function Navbar() {
         style={{ opacity }}
         className='tw-absolute tw-left-0 tw-top-0 tw-z-10 tw-h-full tw-w-full tw-bg-white'
       />
-      <span className='tw-relative tw-z-20 tw-flex tw-items-center tw-gap-5'>
+      <span className='tw-relative tw-z-20 tw-flex tw-items-center tw-gap-[32px]'>
         <Link href={'/'} className='tw-rounded-xl tw-bg-white tw-p-3'>
           <Image src={Brand} alt='brand-logo' />
         </Link>
@@ -39,28 +43,26 @@ function Navbar() {
           className='tw-hidden sm:tw-block'
           _hover={{ color: 'primary.500' }}
         >
-          Beranda
+          <motion.span style={{ color }}>Beranda</motion.span>
         </Link>
         <Dropdown
           label='Tentang Kami'
           items={NavDropdownItem}
-          display={{base:"none",sm:"block"}}
+          display={{ base: 'none', sm: 'block' }}
+        />
+
+        <Dropdown
+          label='Program Kami'
+          items={NavDropdownOurPrograms}
+          display={{ base: 'none', sm: 'block' }}
         />
       </span>
-      <Button
-        textColor={'white'}
-        style={{ backgroundColor: COLOR_PRIMARY }}
-        display={{base:"none",sm:"block"}}
-        className='tw-z-10'
-      >
-        Hubungi
-      </Button>
-      <button
-        style={{ color: COLOR_PRIMARY }}
+      <motion.button
+        style={{ color }}
         className='tw-relative tw-z-10 tw-block tw-text-xl sm:tw-hidden'
       >
         <GiHamburgerMenu />
-      </button>
+      </motion.button>
     </motion.nav>
   );
 }

@@ -10,46 +10,70 @@ import {
   MenuProps,
   useDisclosure,
 } from '@chakra-ui/react';
+import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import React, { ReactElement, ReactNode } from 'react';
+import { usePathname } from 'next/navigation';
 import { BiChevronDown } from 'react-icons/bi';
 
 export type DropdownItemType = {
   label: string | ReactNode;
   url: string;
 };
+export type DropdownOurPrograms = {
+  label: string | ReactNode;
+  url: string;
+};
 
 type DropdownType = {
   icon?: ReactElement;
-  label: string;
+  label: string | ReactNode;
   items: DropdownItemType[];
 };
 
-function Dropdown({ label, items, icon = <BiChevronDown />,...props }: DropdownType & MenuButtonProps) {
+function Dropdown({
+  label,
+  items,
+  icon,
+  ...props
+}: DropdownType & MenuButtonProps) {
+  const { scrollY } = useScroll();
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const {push} = useRouter();
+  const pathname = usePathname();
+  const color = useTransform(
+    scrollY,
+    [0, 100],
+    [pathname !== '/' ? '#000' : '#fff', '#000']
+  );
+  const { push } = useRouter();
 
   return (
     <Box>
       <Menu isOpen={isOpen}>
         <MenuButton
           onMouseEnter={onOpen}
-          onClick={()=>isOpen ? onClose() : onOpen()}
+          onClick={() => (isOpen ? onClose() : onOpen())}
           fontSize={'sm'}
           _active={{ border: 'none' }}
           as={Button}
           variant={'unstyled'}
-          rightIcon={icon}
+          rightIcon={
+            icon || (
+              <motion.div style={{ color }}>
+                <BiChevronDown />
+              </motion.div>
+            )
+          }
           {...props}
         >
-          {label}
+          <motion.a style={{ color }}> {label}</motion.a>
         </MenuButton>
         <MenuList onMouseLeave={onClose}>
           {items.map((item) => (
             <MenuItem
               key={crypto.randomUUID()}
               _hover={{ backgroundColor: 'primary.50', textDecor: 'none' }}
-              onClick={()=>push(item.url)}
+              onClick={() => push(item.url)}
             >
               {item.label}
             </MenuItem>

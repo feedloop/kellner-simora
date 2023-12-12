@@ -1,14 +1,10 @@
-import {
-  COLOR_PRIMARY,
-  COLOR_PRIMARY_LIGHTER,
-  COLOR_PRIMARY_TEXT,
-} from '@/constants/ui';
-import { Box, Button, HStack, Heading, Text } from '@chakra-ui/react';
+import { COLOR_PRIMARY, COLOR_SECONDARY } from '@/constants/ui';
+import { Box, Button, Heading, Text } from '@chakra-ui/react';
 import React from 'react';
 
 function PitchSection() {
   return (
-    <section className='tw-relative tw-px-[1rem] tw-pb-[4rem] sm:tw-pb-[6rem] sm:tw-px-[7rem]'>
+    <section className='tw-relative tw-px-[1rem] tw-pb-[4rem] sm:tw-px-[7rem] sm:tw-pb-[6rem]'>
       <Box
         display={'flex'}
         flexDir={{ base: 'column', sm: 'row' }}
@@ -18,7 +14,7 @@ function PitchSection() {
         px={{ base: '1.5rem', sm: 0 }}
         py={{ base: '2.5rem', sm: 0 }}
         p={{ sm: '4rem' }}
-        bgColor={COLOR_PRIMARY_LIGHTER}
+        bgColor={COLOR_SECONDARY}
       >
         <div>
           <Heading
@@ -41,28 +37,16 @@ function PitchSection() {
           </Text>
         </div>
         <Box
-          mt={{base:"2rem",sm:0}}
-          display={'flex'}
-          flexDir={{ base: 'column-reverse', sm: 'row' }}
-          gap={'.75rem'}
-          w={{base:"full",sm:'fit-content'}}
-          alignItems={{base:"stretch"}}
+          mt={{ base: '2rem', sm: 0 }}
+          w={{ base: 'full', sm: 'fit-content' }}
         >
-          <Button
-            color={COLOR_PRIMARY_TEXT}
-            colorScheme='whiteAlpha'
-            style={{ background: 'white' }}
-            w={{base:"full", sm:"fit-content"}}
-          >
-            Pelajari Layanan
-          </Button>
           <Button
             color={'white'}
             colorScheme='primary'
             style={{ background: COLOR_PRIMARY }}
-            w={{base:"full", sm:"fit-content"}}
+            w={{ base: 'full', sm: 'fit-content' }}
           >
-            Daftar
+            Kontak kami
           </Button>
         </Box>
       </Box>
