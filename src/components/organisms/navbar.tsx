@@ -10,13 +10,16 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { twMerge } from 'tailwind-merge';
-import { COLOR_PRIMARY } from '@/constants/ui';
 
 function Navbar() {
   const { scrollY } = useScroll();
   const path = usePathname();
   const opacity = useTransform(scrollY, [0, 100], [0, 1]);
-  const color = useTransform(scrollY, [0, 100], ['#fff', '#000']);
+  const color = useTransform(
+    scrollY,
+    [0, 100],
+    [path !== '/' ? '#000' : '#fff', '#000']
+  );
 
   return (
     <motion.nav

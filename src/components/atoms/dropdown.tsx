@@ -13,6 +13,7 @@ import {
 import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import React, { ReactElement, ReactNode } from 'react';
+import { usePathname } from 'next/navigation';
 import { BiChevronDown } from 'react-icons/bi';
 
 export type DropdownItemType = {
@@ -38,7 +39,12 @@ function Dropdown({
 }: DropdownType & MenuButtonProps) {
   const { scrollY } = useScroll();
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const color = useTransform(scrollY, [0, 100], ['#fff', '#000']);
+  const pathname = usePathname();
+  const color = useTransform(
+    scrollY,
+    [0, 100],
+    [pathname !== '/' ? '#000' : '#fff', '#000']
+  );
   const { push } = useRouter();
 
   return (
