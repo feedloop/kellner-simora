@@ -10,6 +10,7 @@ import {
   MenuProps,
   useDisclosure,
 } from '@chakra-ui/react';
+import { useScroll, useTransform, motion } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import React, { ReactElement, ReactNode } from 'react';
 import { BiChevronDown } from 'react-icons/bi';
@@ -25,17 +26,19 @@ export type DropdownOurPrograms = {
 
 type DropdownType = {
   icon?: ReactElement;
-  label: string;
+  label: string | ReactNode;
   items: DropdownItemType[];
 };
 
 function Dropdown({
   label,
   items,
-  icon = <BiChevronDown />,
+  icon,
   ...props
 }: DropdownType & MenuButtonProps) {
+  const { scrollY } = useScroll();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const color = useTransform(scrollY, [0, 100], ['#fff', '#000']);
   const { push } = useRouter();
 
   return (
@@ -48,10 +51,16 @@ function Dropdown({
           _active={{ border: 'none' }}
           as={Button}
           variant={'unstyled'}
-          rightIcon={icon}
+          rightIcon={
+            icon || (
+              <motion.div style={{ color }}>
+                <BiChevronDown />
+              </motion.div>
+            )
+          }
           {...props}
         >
-          {label}
+          <motion.a style={{ color }}> {label}</motion.a>
         </MenuButton>
         <MenuList onMouseLeave={onClose}>
           {items.map((item) => (

@@ -10,11 +10,13 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { usePathname } from 'next/navigation';
 import { twMerge } from 'tailwind-merge';
+import { COLOR_PRIMARY } from '@/constants/ui';
 
 function Navbar() {
   const { scrollY } = useScroll();
   const path = usePathname();
   const opacity = useTransform(scrollY, [0, 100], [0, 1]);
+  const color = useTransform(scrollY, [0, 100], ['#fff', '#000']);
 
   return (
     <motion.nav
@@ -27,7 +29,7 @@ function Navbar() {
         style={{ opacity }}
         className='tw-absolute tw-left-0 tw-top-0 tw-z-10 tw-h-full tw-w-full tw-bg-white'
       />
-      <span className='tw-relative tw-z-20 tw-flex tw-items-center tw-gap-5'>
+      <span className='tw-relative tw-z-20 tw-flex tw-items-center tw-gap-[32px]'>
         <Link href={'/'} className='tw-rounded-xl tw-bg-white tw-p-3'>
           <Image src={Brand} alt='brand-logo' />
         </Link>
@@ -38,25 +40,26 @@ function Navbar() {
           className='tw-hidden sm:tw-block'
           _hover={{ color: 'primary.500' }}
         >
-          Beranda
+          <motion.span style={{ color }}>Beranda</motion.span>
         </Link>
         <Dropdown
           label='Tentang Kami'
           items={NavDropdownItem}
           display={{ base: 'none', sm: 'block' }}
         />
-        {/* <Dropdown
+
+        <Dropdown
           label='Program Kami'
           items={NavDropdownOurPrograms}
           display={{ base: 'none', sm: 'block' }}
-        /> */}
+        />
       </span>
-      <button
-        style={{ color: 'white' }}
+      <motion.button
+        style={{ color }}
         className='tw-relative tw-z-10 tw-block tw-text-xl sm:tw-hidden'
       >
         <GiHamburgerMenu />
-      </button>
+      </motion.button>
     </motion.nav>
   );
 }
