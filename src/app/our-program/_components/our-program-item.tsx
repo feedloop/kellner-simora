@@ -1,9 +1,8 @@
-import { COLOR_PRIMARY, COLOR_TEXT } from '@/constants/ui';
-import { Box, Button, Heading, Text } from '@chakra-ui/react';
+import { COLOR_TEXT } from '@/constants/ui';
+import { Box, Heading, Text } from '@chakra-ui/react';
 import Image, { StaticImageData } from 'next/image';
 import React from 'react';
 import toKebabCase from '@/utils/toCamelCase';
-import { isMobile } from 'react-device-detect';
 
 export type FieldItemType = {
   smallHead: string;

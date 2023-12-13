@@ -10,10 +10,10 @@ function Recruitment() {
   return (
     <Template>
       <IntroSection />
-      <CtaSection/>
-      <TestimonialSection/>
-      <FaqSection/>
-      <ContactUsSection/>
+      <CtaSection />
+      {/* <TestimonialSection/> */}
+      <FaqSection />
+      <ContactUsSection />
     </Template>
   );
 }

@@ -6,6 +6,7 @@ export { default as BuildingImage } from './BuildingImage.webp';
 export { default as FieldImageItem1 } from './FieldImageItem1.webp';
 export { default as FieldImageItem2 } from './FieldImageItem2.webp';
 export { default as WomenHeroSection } from './WomenHeroSection.webp';
+export { default as ManSpeaking } from './ManSpeaking.webp';
 export { default as ChefImage } from './ChefImage.webp';
 export { default as PeopleMeeting } from './PeopleMeeting.webp';
 export { default as PeopleWork } from './PeopleWork.webp';

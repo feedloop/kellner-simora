@@ -4,14 +4,14 @@ import React from 'react';
 import BenefitIconItem from './benefit-icon-item';
 import { COLOR_GRAY_900 } from '@/constants/ui';
 import Image from 'next/image';
-import { AboutImage } from '@/assets/images';
+import { ManSpeaking } from '@/assets/images';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { LinePattern } from '@/assets/svgs';
 
 function BenefitSection() {
   return (
     <section className='tw-relative tw-w-full tw-px-[1rem] tw-pb-[6rem] sm:tw-px-[7rem]'>
-      <HStack mt={{ base: '3rem', sm: '5.375rem' }}>
+      <HStack gap='64px' mt={{ base: '3rem', sm: '5.375rem' }}>
         <VStack gap={'3rem'}>
           {AboutListItem.map((item) => (
             <HStack key={crypto.randomUUID()} alignItems={'start'}>
@@ -38,13 +38,13 @@ function BenefitSection() {
           ))}
         </VStack>
         <Image
-          className='tw-relative tw-z-10 tw-hidden tw-w-1/2 sm:tw-block'
-          src={AboutImage}
-          alt='man-handshaking-with-other-people'
+          className='tw-relative tw-z-10 tw-hidden tw-w-1/2 tw-rounded-[32px] sm:tw-block'
+          src={ManSpeaking}
+          alt='man speaking'
         />
       </HStack>
       <Image
-        className='tw-absolute tw-hidden sm:tw-block tw-bottom-0 tw-right-0'
+        className='tw-absolute tw-bottom-0 tw-right-0 tw-hidden sm:tw-block'
         src={LinePattern}
         alt='line-pattern'
       />

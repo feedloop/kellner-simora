@@ -23,7 +23,7 @@ function CtaSection() {
             color={'white'}
             fontWeight={'semibold'}
           >
-            Langkah awal Anda dimulai disini
+            Kuasai Bahasa Jerman sebelum Anda berangkat
           </Heading>
           <Text
             lineHeight={'1.875rem'}
@@ -32,13 +32,13 @@ function CtaSection() {
             fontWeight={400}
             mt={'1rem'}
           >
-            Ikuti jejak 100+ orang yang telah berhasil meraih mimpinya.
+            Join over 4,000+ startups already growing with Untitled.
           </Text>
           <Button
             color={'white'}
-            w='100%'
             mt={{ base: '2rem', sm: '2.5rem' }}
             colorScheme='primary'
+            className=' tw-w-full sm:tw-w-fit'
             style={{ background: COLOR_PRIMARY }}
           >
             Daftar pelatihan

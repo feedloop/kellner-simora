@@ -27,14 +27,14 @@ function FaqSection() {
       <Heading as={'h2'} fontWeight={'semibold'} textAlign={'center'}>
         Pertanyaan
       </Heading>
-      <Text
+      {/* <Text
         textAlign={'center'}
         fontSize={'1.25rem'}
         mt={'1.25rem'}
         color={COLOR_TEXT}
       >
         Lorem ipsum dolor sit amet.
-      </Text>
+      </Text> */}
       <Accordion
         onChange={(index) =>
           push(
