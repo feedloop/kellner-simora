@@ -10,20 +10,23 @@ export type FieldItemType = {
   head: string;
   content: string | React.ReactNode;
   imageUrl: string | StaticImageData;
-  buttonLabel: string;
-  buttonEvent?: () => void;
+  id: string;
 };
 
-function FieldItem({
+function OurProgramItem({
   smallHead,
   head,
   content,
-  buttonLabel,
-  buttonEvent,
   imageUrl,
+  id,
 }: FieldItemType) {
   return (
-    <section className='tw-flex tw-flex-col tw-justify-between tw-gap-[3rem] sm:tw-gap-[4rem] tw-px-[1rem] sm:tw-flex-row sm:tw-px-[7rem]'>
+    <section
+      /// https://stackoverflow.com/a/70745758/18038473
+      id={id}
+      /// https://stackoverflow.com/a/74145012/18038473
+      className='tw-flex tw-flex-col tw-justify-between tw-gap-[3rem] tw-px-[1rem] tw-pt-[90px] sm:tw-flex-row sm:tw-gap-[4rem] sm:tw-px-[7rem]'
+    >
       <Box maxW={{ sm: '50%' }}>
         <Text
           fontWeight={'semibold'}
@@ -43,22 +46,12 @@ function FieldItem({
         <Box lineHeight={'1.75rem'} color={COLOR_TEXT} my={'2.5rem'}>
           {content}
         </Box>
-        <Button
-          display={{ base: 'none', sm: 'block' }}
-          colorScheme={'primary'}
-          onClick={buttonEvent}
-          variant={{ sm: 'solid' }}
-          style={{background:COLOR_PRIMARY}}
-        >
-          {buttonLabel}
-        </Button>
-        <Button display={{ base: 'block', sm: 'none' }} variant={'outline'} w={"full"}>
-          {buttonLabel}
-        </Button>
       </Box>
-      <Image src={imageUrl} alt={toKebabCase(head)} />
+      <Box>
+        <Image src={imageUrl} alt={toKebabCase(head)} />
+      </Box>
     </section>
   );
 }
 
-export default FieldItem;
+export default OurProgramItem;

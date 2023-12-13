@@ -1,9 +1,9 @@
 enum Routes {
   Home = '/',
   WhyUs = '/why-us',
-  Field = '/field',
+  OurProgram = '/our-program',
   Contact = '/contact',
-  Recruitment = "/recruitment"
+  Recruitment = '/recruitment',
 }
 
 export default Routes;
