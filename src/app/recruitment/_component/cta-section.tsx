@@ -36,6 +36,7 @@ function CtaSection() {
           </Text>
           <Button
             color={'white'}
+            w='100%'
             mt={{ base: '2rem', sm: '2.5rem' }}
             colorScheme='primary'
             style={{ background: COLOR_PRIMARY }}

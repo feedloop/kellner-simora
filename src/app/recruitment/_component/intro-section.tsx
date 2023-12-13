@@ -8,7 +8,7 @@ function IntroSection() {
   return (
     <section className='tw-w-full tw-px-[1rem] tw-pt-[6rem] sm:tw-px-[7rem]'>
       <VStack className='tw-text-center'>
-        <Text color={'primary.500'} fontWeight={'semibold'}>
+        <Text w='100%' color={'primary.500'} fontWeight={'semibold'}>
           Rekrutmen
         </Text>
         <Heading
