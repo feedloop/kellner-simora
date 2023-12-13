@@ -53,15 +53,15 @@ export const NavDropdownItem: DropdownItemType[] = [
 export const NavDropdownOurPrograms: DropdownOurPrograms[] = [
   {
     label: <span>Talent Development Services</span>,
-    url: `${Routes.OurProgram}`,
+    url: `${Routes.OurProgram}?section=1`,
   },
   {
     label: <span>Corporate Development Services</span>,
-    url: `${Routes.OurProgram}`,
+    url: `${Routes.OurProgram}?section=2`,
   },
   {
     label: <span>Talent Placement Services</span>,
-    url: `${Routes.OurProgram}`,
+    url: `${Routes.OurProgram}?section=3`,
   },
 ];
 
@@ -256,19 +256,13 @@ export const Programtems: FieldItemType[] = [
     content: (
       <>
         <Text>
-          Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam
-          suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis
-          montes, sit sit. Tellus aliquam enim urna, etiam. Dolor enim eu tortor
-          urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In
-          aliquet pellentesque aenean hac vestibulum turpis mi bibendum diam.
-          Tempor integer aliquam in vitae malesuada. Elit nisi in eleifend sed
-          nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis
-          risus. Sed condimentum enim dignissim adipiscing faucibus consequat,
-          urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate
-          posuere purus sit congue convallis aliquet. Ipsum sit mattis nulla
-          quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque
-          congue eget consectetur turpis. Sapien, dictum molestie sem tempor.
-          Diam elit, orci, tincidunt aenean.
+          We also offer Talent Placement Services that support companies to
+          recruit external talent to meet the required growing role position in
+          that company. Our Talent Placement Service doesn’t only recruit
+          external talent based on the company’s requirements but also infuse
+          these external talents with our well-established Talent Development
+          Services , to strengthen the candidates skills and capabilities as
+          part of talent on-boarding into the company.
         </Text>
       </>
     ),

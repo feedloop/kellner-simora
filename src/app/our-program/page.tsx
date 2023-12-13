@@ -18,7 +18,7 @@ function Field() {
     if (Boolean(section)) {
       push(`${path}#${section}`);
     }
-  }, []);
+  }, [section]);
   return (
     <Template>
       <section className='tw-w-full tw-px-[1rem] tw-py-[48px] sm:tw-px-[7rem]'>
