@@ -2,8 +2,9 @@ import {
   PricingCardType,
   TestimonialType,
 } from '@/app/_components/pricing-card';
-import { FieldItemType } from '@/app/field/_components/field-item';
+import { FieldItemType } from '@/app/our-program/_components/our-program-item';
 import {
+  AboutImage,
   Avatar,
   Avatar2,
   Avatar3,
@@ -12,6 +13,8 @@ import {
   Avatar6,
   FieldImageItem1,
   FieldImageItem2,
+  PeopleMeeting,
+  PeopleWork,
 } from '@/assets/images';
 import {
   BasketFooter,
@@ -30,6 +33,8 @@ import {
 } from '@/components/atoms/dropdown';
 import { Image } from '@/types/misc';
 import { Text } from '@chakra-ui/react';
+import Routes from './routes';
+import { AccordionListNavbar } from '@/components/organisms/navbar';
 
 type SocialFooterType = Image & {
   link: string;
@@ -38,29 +43,25 @@ type SocialFooterType = Image & {
 export const NavDropdownItem: DropdownItemType[] = [
   {
     label: <span>Mengapa Kellner's ?</span>,
-    url: '/why-us',
-  },
-  {
-    label: <span>Bidang Usaha</span>,
-    url: '/field',
+    url: `${Routes.WhyUs}`,
   },
   {
     label: <span>Kontak Kami</span>,
-    url: '/contact',
+    url: `${Routes.Contact}`,
   },
 ];
 export const NavDropdownOurPrograms: DropdownOurPrograms[] = [
   {
     label: <span>Talent Development Services</span>,
-    url: '/why-us',
+    url: `${Routes.OurProgram}`,
   },
   {
     label: <span>Corporate Development Services</span>,
-    url: '/field',
+    url: `${Routes.OurProgram}`,
   },
   {
     label: <span>Talent Placement Services</span>,
-    url: '/contact',
+    url: `${Routes.OurProgram}`,
   },
 ];
 
@@ -84,7 +85,38 @@ export const AboutListItem = [
     buttonLabel: 'Lihat internship',
   },
 ];
-
+export const NavbarResponsiveList: AccordionListNavbar[] = [
+  {
+    name: 'Tentang Kami',
+    children: [
+      {
+        name: 'Mengapa memilih Kellner',
+        link: `${Routes.WhyUs}`,
+      },
+      {
+        name: 'Kontak kami',
+        link: `${Routes.Contact}`,
+      },
+    ],
+  },
+  {
+    name: 'Program Kami',
+    children: [
+      {
+        name: 'Talent Development Services',
+        link: `${Routes.OurProgram}?section=1`,
+      },
+      {
+        name: 'Corporate Development Services',
+        link: `${Routes.OurProgram}?section=2`,
+      },
+      {
+        name: 'Talent Placement Services',
+        link: `${Routes.OurProgram}?section=3`,
+      },
+    ],
+  },
+];
 export const SocialFooter: SocialFooterType[] = [
   // {
   //   image: TwitterFooter,
@@ -175,9 +207,8 @@ export const TestimonialList: TestimonialType[] = [
     title: 'A local Call Center company',
   },
 ];
-export const FieldItems: FieldItemType[] = [
+export const Programtems: FieldItemType[] = [
   {
-    buttonLabel: 'Lihat pelatihan',
     content: (
       <>
         <Text>
@@ -197,12 +228,12 @@ export const FieldItems: FieldItemType[] = [
         </Text>
       </>
     ),
-    head: 'Talent Development Services',
-    smallHead: 'Bidang usaha',
-    imageUrl: FieldImageItem1,
+    head: 'Layanan Pengembangan Talenta',
+    smallHead: 'Program Kami',
+    imageUrl: AboutImage,
+    id: '1',
   },
   {
-    buttonLabel: 'Lihat rekrutmen',
     content: (
       <>
         <Text>
@@ -216,9 +247,35 @@ export const FieldItems: FieldItemType[] = [
         </Text>
       </>
     ),
-    head: 'Talent Placement Services',
-    smallHead: 'Bidang usaha',
-    imageUrl: FieldImageItem2,
+    head: 'Layanan Pengembangan Perusahaan',
+    smallHead: 'Program Kami',
+    id: '2',
+    imageUrl: PeopleMeeting,
+  },
+  {
+    content: (
+      <>
+        <Text>
+          Mi tincidunt elit, id quisque ligula ac diam, amet. Vel etiam
+          suspendisse morbi eleifend faucibus eget vestibulum felis. Dictum quis
+          montes, sit sit. Tellus aliquam enim urna, etiam. Dolor enim eu tortor
+          urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In
+          aliquet pellentesque aenean hac vestibulum turpis mi bibendum diam.
+          Tempor integer aliquam in vitae malesuada. Elit nisi in eleifend sed
+          nisi. Pulvinar at orci, proin imperdiet commodo consectetur convallis
+          risus. Sed condimentum enim dignissim adipiscing faucibus consequat,
+          urna. Viverra purus et erat auctor aliquam. Risus, volutpat vulputate
+          posuere purus sit congue convallis aliquet. Ipsum sit mattis nulla
+          quam nulla. Gravida id gravida ac enim mauris id. Non pellentesque
+          congue eget consectetur turpis. Sapien, dictum molestie sem tempor.
+          Diam elit, orci, tincidunt aenean.
+        </Text>
+      </>
+    ),
+    head: 'Layanan Penempatan Talenta',
+    smallHead: 'Program Kami',
+    id: '3',
+    imageUrl: PeopleWork,
   },
 ];
 

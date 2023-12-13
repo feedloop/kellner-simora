@@ -52,14 +52,17 @@ function Footer() {
               Layanan Kami
             </Text>
             <div className='tw-flex tw-flex-col tw-gap-3'>
-              <Link color={COLOR_TEXT} href={'#'}>
+              <Link color={COLOR_TEXT} href={`${Routes.OurProgram}?section=1`}>
                 Layanan Pengembangan Talenta
               </Link>
-              <Link color={COLOR_TEXT} href={'#'}>
+              <Link color={COLOR_TEXT} href={`${Routes.OurProgram}?section=2`}>
                 Layanan Pengembangan Perusahaan
               </Link>
-              <Link color={COLOR_TEXT} href={'#'}>
+              <Link color={COLOR_TEXT} href={`${Routes.OurProgram}?section=3`}>
                 Layanan Penempatan Talenta
+              </Link>
+              <Link color={COLOR_TEXT} href={'/recruitment'}>
+                Kuliah sambil Kerja
               </Link>
             </div>
           </div>

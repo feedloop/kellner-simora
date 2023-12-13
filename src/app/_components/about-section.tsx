@@ -76,7 +76,7 @@ function AboutSection() {
         <Image
           className='tw-relative tw-z-10 tw-hidden tw-w-1/2 tw-rounded-[32px] sm:tw-block'
           src={AboutImage}
-          alt='man-handshaking-with-other-people'
+          alt='people-discuss'
         />
       </HStack>
       <Image
