@@ -25,7 +25,7 @@ function PricingSection() {
           lineHeight={'2.75rem'}
           letterSpacing={'-2%'}
         >
-          Membantu Anda di tiap tahapnya
+          Membantu Anda di setiap tahapan
         </Heading>
         <Text
           color={COLOR_TEXT}
@@ -33,8 +33,7 @@ function PricingSection() {
           maxW={{ sm: '60%' }}
           mx={{ sm: 'auto' }}
         >
-          Kellner’s memiliki serangkaian layanan yang membantu Anda
-          mentransformasikan perusahaan Anda
+          Kembangkan potensi Anda dengan serangkaian layanan kami
         </Text>
       </VStack>
       <Box

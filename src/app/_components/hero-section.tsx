@@ -30,7 +30,7 @@ function HeroSection() {
           color={'white'}
           fontWeight={700}
         >
-          Kellner Simora International
+          Kellner Simora Internasional
         </Text>
         <Heading
           fontSize={{ base: '2.25rem', sm: '4.5rem' }}

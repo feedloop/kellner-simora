@@ -20,7 +20,7 @@ function AboutSection() {
           lineHeight={'1.5rem'}
           color={'primary.500'}
         >
-          Kenapa memilih Kellner'S
+          Mengapa memilih Kellner?
         </Text>
         <Heading
           as={'h2'}

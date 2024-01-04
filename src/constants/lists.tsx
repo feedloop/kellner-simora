@@ -153,58 +153,58 @@ export const SocialFooter: SocialFooterType[] = [
 export const PricingItems: PricingCardType[] = [
   {
     buttonLabel: 'Lihat layanan',
-    head: 'Layanan Pengembangan Talenta',
-    headDesc: 'SSolusi terintegrasi untuk mengasah talenta kelas dunia',
+    head: 'Pengembangan Talenta',
+    headDesc: 'Membekali lulusan dengan keterampilan tingkat dunia',
     item: [
-      'Fast-track onboarding untuk keryawan baru',
-      'Pelatihan yang dipimpin oleh ahli',
-      'Meliputi peran seperti sales, HR, data analysis',
-      'Talenta kelas dunia untuk perusahaan',
-      'Meliputi sales, digital leadership, dan HR',
+      'Bootcamp pelatihan khusus dari praktisi ahli',
+      'Keterampilan berbasis profesi',
+      'Keterampilan ready-to-use untuk mempercepat onboarding',
+      'Mengasah talenta untuk standar global',
+      'Mencakup bidang Sales, HR, Finance, sampai Digital',
     ],
   },
   {
     buttonLabel: 'Lihat layanan',
-    head: 'Layanan Pengembangan Perusahaan (Layanan Training & Konsultasi ISO)',
+    head: 'Pengembangan Perusahaan',
     headDesc:
-      'Memberikan pelatihan dan konsultasi ISO untuk meningkatkan standar dan keunggulan organisasi.',
+      'Transformasi korporat untuk mencapai standar internasional',
     item: [
-      'Mencapai standar kualitas internasional',
-      'SO standards like 9001, 14001',
-      'Mentransformasi perusahaan menuju keunggulan',
-      'Termasuk lingkungan dan keselamatan',
-      'Meliputi keamanan pangan, anti suap, dan lainnya.',
+      'Pelatihan dan konsultasi ISO',
+      'Standar internasional untuk berbagai bidang',
+      'Standar mutu, keamanan data, sampai dengan energi',
+      'TMeningkatkan reputasi dan kepatuhan',
+      'Cakupan lengkap dari ISO 5001 hingga ISO 45001',
     ],
   },
   {
     buttonLabel: 'Lihat layanan',
-    head: 'Layanan Penempatan Talenta',
+    head: 'Penempatan Talenta',
     headDesc:
-      'Menghubungkan talenta dengan berbagai peluang untuk kesuksesan Anda.',
+      'Menghubungkan talenta terbaik untuk kebutuhan perusahaan',
     item: [
-      'Talenta untuk berbagai kebutuhan',
-      'Terintegrasi dengan pengembangan keterampilan',
-      'Memperkuat kemampuan kandidat',
-      'Memenuhi kebutuhan yang senantiasa berkembang',
-      'Menggabungkan bakat eksternal dengan pelatihan',
+      'Rekrutmen talenta eksternal sesuai kebutuhan',
+      'Memenuhi posisi yang sedang berkembang pesat',
+      'Penguatan keterampilan kandidat',
+      'Kualitas yang cakap untuk peran kunci dan strategis',
+      'Proses onboarding yang efisien dan efektif',
     ],
   },
 ];
 export const TestimonialList: TestimonialType[] = [
   {
     headDesc:
-      '“Working with Kellner was a great experience for us. They have a team of experts who are knowledgeable and experienced in ISO 27001. They helped us understand the standard and its benefits, and guided us step by step on how to implement it in our organization."',
-    title: 'A local Law Firm company',
+      '"Bekerja sama dengan Kellner merupakan pengalaman yang luar biasa bagi kami. Mereka memiliki tim ahli yang berpengetahuan dan berpengalaman dalam ISO 27001. Mereka membantu kami memahami standar tersebut dan manfaatnya, serta membimbing kami langkah demi langkah tentang cara menerapkannya di organisasi kami."',
+    title: 'Firma hukum lokal',
   },
   {
     headDesc:
-      '“Kellner is more than just a consultant for ISO 27001. They are a partner who cares about our success and satisfaction. They listened to our needs and challenges, and tailored their service to suit our specific situation."',
-    title: 'A local Tax Consultant company',
+      '“Kellner lebih dari sekedar konsultan untuk ISO 27001. Mereka adalah mitra yang peduli tentang kesuksesan dan kepuasan kami. Mereka mendengarkan kebutuhan dan tantangan kami, serta menyesuaikan layanan mereka untuk situasi spesifik kami."',
+    title: 'Perusahaan konsultan pajak lokal',
   },
   {
     headDesc:
-      '“Kellner is a trusted partner for us in our journey to achieve ISO 27001 certification. They provided us with a comprehensive and customized consultation service that covered all aspects of the standard."',
-    title: 'A local Call Center company',
+      '“Kellner adalah mitra terpercaya bagi kami dalam perjalanan kami untuk mencapai sertifikasi ISO 27001. Mereka memberikan kami layanan konsultasi yang komprehensif dan disesuaikan yang mencakup semua aspek dari standar tersebut."',
+    title: 'Perusahaan call center lokal',
   },
 ];
 export const Programtems: FieldItemType[] = [
