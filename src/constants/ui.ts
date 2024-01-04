@@ -6,3 +6,4 @@ export const COLOR_TEXT = '#475467';
 export const COLOR_GRAY_500 = '#667085';
 export const COLOR_GRAY_900 = '#101828';
 export const COLOR_SNOW_LIGHTEST = '#F5F5F5';
+export const COLOR_WHATSAPP = '#25D366';
