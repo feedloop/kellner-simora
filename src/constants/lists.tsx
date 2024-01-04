@@ -42,7 +42,7 @@ type SocialFooterType = Image & {
 
 export const NavDropdownItem: DropdownItemType[] = [
   {
-    label: <span>Mengapa Kellner's ?</span>,
+    label: <span>Mengapa Kellner?</span>,
     url: `${Routes.WhyUs}`,
   },
   {
@@ -52,15 +52,15 @@ export const NavDropdownItem: DropdownItemType[] = [
 ];
 export const NavDropdownOurPrograms: DropdownOurPrograms[] = [
   {
-    label: <span>Talent Development Services</span>,
+    label: <span>Pengembangan Talenta</span>,
     url: `${Routes.OurProgram}?section=1`,
   },
   {
-    label: <span>Corporate Development Services</span>,
+    label: <span>Pengembangan Perusahaan</span>,
     url: `${Routes.OurProgram}?section=2`,
   },
   {
-    label: <span>Talent Placement Services</span>,
+    label: <span>Penempatan Talenta</span>,
     url: `${Routes.OurProgram}?section=3`,
   },
 ];
@@ -103,15 +103,15 @@ export const NavbarResponsiveList: AccordionListNavbar[] = [
     name: 'Program Kami',
     children: [
       {
-        name: 'Talent Development Services',
+        name: 'Pengembangan Talenta',
         link: `${Routes.OurProgram}?section=1`,
       },
       {
-        name: 'Corporate Development Services',
+        name: 'Pengembangan Perusahaan',
         link: `${Routes.OurProgram}?section=2`,
       },
       {
-        name: 'Talent Placement Services',
+        name: 'Penempatan Talenta',
         link: `${Routes.OurProgram}?section=3`,
       },
     ],
@@ -126,13 +126,13 @@ export const SocialFooter: SocialFooterType[] = [
   {
     image: LinkedinFooter,
     alt: 'linkedin-social-footer',
-    link: '/',
+    link: 'https://www.linkedin.com/in/kellner-simora-international-296901295/',
   },
-  {
-    image: FacebookFooter,
-    alt: 'facebook-social-footer',
-    link: '/',
-  },
+  // {
+  //   image: FacebookFooter,
+  //   alt: 'facebook-social-footer',
+  //   link: '/',
+  // },
   // {
   //   image: GithubFooter,
   //   alt: 'github-social-footer',
