@@ -2,6 +2,8 @@ import { WomenHeroSection } from '@/assets/images';
 import { CirclePatternLeft, CirclePatternRight } from '@/assets/svgs';
 import { COLOR_SECONDARY, COLOR_PRIMARY } from '@/constants/ui';
 import { Box, Button, Heading, Text } from '@chakra-ui/react';
+import Routes from '@/constants/routes';
+import NextLink from 'next/link'
 import Image from 'next/image';
 import React from 'react';
 
@@ -30,7 +32,7 @@ function HeroSection() {
           color={'white'}
           fontWeight={700}
         >
-          Kellner Simora International
+          Kellner Simora Internasional
         </Text>
         <Heading
           fontSize={{ base: '2.25rem', sm: '4.5rem' }}
@@ -53,6 +55,7 @@ function HeroSection() {
           gap={'.75rem'}
           mt={{ base: '2rem', sm: '3rem' }}
         >
+          <NextLink href={Routes.WhyUs} passHref>
           <Button
             color='white'
             size={{ base: 'md', sm: 'lg' }}
@@ -61,6 +64,7 @@ function HeroSection() {
           >
             Kenali Kami
           </Button>
+          </NextLink>
         </Box>
       </div>
       <Image

@@ -1,5 +1,7 @@
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '@/constants/ui';
+import { COLOR_WHATSAPP, COLOR_SECONDARY } from '@/constants/ui';
 import { Box, Button, Heading, Text } from '@chakra-ui/react';
+import NextLink from 'next/link'
+import { FaWhatsapp } from "react-icons/fa";
 import React from 'react';
 
 function PitchSection() {
@@ -40,14 +42,17 @@ function PitchSection() {
           mt={{ base: '2rem', sm: 0 }}
           w={{ base: 'full', sm: 'fit-content' }}
         >
-          <Button
-            color={'white'}
-            colorScheme='primary'
-            style={{ background: COLOR_PRIMARY }}
-            w={{ base: 'full', sm: 'fit-content' }}
-          >
-            Kontak kami
-          </Button>
+          <NextLink href="https://wa.me/62811125838" target='_blank' passHref>
+            <Button
+              leftIcon={<FaWhatsapp />}
+              color={'white'}
+              colorScheme='primary'
+              style={{ background: COLOR_WHATSAPP }}
+              w={{ base: 'full', sm: 'fit-content' }}
+            >
+              Hubungi WhatsApp Kami
+            </Button>
+          </NextLink>
         </Box>
       </Box>
     </section>

@@ -1,2 +1,5 @@
 export const COMPANY_NAME = "PT. Kellner Simora Internasional"
-export const HQ_ADDRESS = "The CEO Building, Level 12Jl TB Simatupang No. 18 C Jakarta"
+export const HQ_BUILDING = "The CEO Building, Level 12"
+export const HQ_ADDRESS = "Jl TB Simatupang No. 18 C Jakarta"
+export const HQ_PHONE = "+62 811 125 838"
+export const HQ_EMAIL = "support@kellnersimora.com"
