@@ -32,7 +32,7 @@ import {
   DropdownOurPrograms,
 } from '@/components/atoms/dropdown';
 import { Image } from '@/types/misc';
-import { Text } from '@chakra-ui/react';
+import { Text, UnorderedList, ListItem } from '@chakra-ui/react';
 import Routes from './routes';
 import { AccordionListNavbar } from '@/components/organisms/navbar';
 
@@ -171,8 +171,7 @@ export const PricingItems: PricingCardType[] = [
     buttonLabel: 'Lihat layanan',
     link: `${Routes.OurProgram}#2`,
     head: 'Pengembangan Perusahaan',
-    headDesc:
-    'Transformasi korporat untuk mencapai standar internasional',
+    headDesc: 'Transformasi korporat untuk mencapai standar internasional',
     item: [
       'Pelatihan dan konsultasi ISO',
       'Standar internasional untuk berbagai bidang',
@@ -185,8 +184,7 @@ export const PricingItems: PricingCardType[] = [
     buttonLabel: 'Lihat layanan',
     link: `${Routes.OurProgram}#3`,
     head: 'Penempatan Talenta',
-    headDesc:
-      'Menghubungkan talenta terbaik untuk kebutuhan perusahaan',
+    headDesc: 'Menghubungkan talenta terbaik untuk kebutuhan perusahaan',
     item: [
       'Rekrutmen talenta eksternal sesuai kebutuhan',
       'Memenuhi posisi yang sedang berkembang pesat',
@@ -218,19 +216,23 @@ export const Programtems: FieldItemType[] = [
     content: (
       <>
         <Text>
-          We offer Talent Development Services that include Industry Intake
-          Programs and Industry Leader Programs. Industry Intake Programs are
-          for companies that want to speed up the learning process of their
-          pre-hired or new hires so that they can quickly contribute to the
-          company goals and objectives based on their new roles. We design our
-          Industry Intake Program to address the significant gap between what
-          university produces and what companies need for specific roles in the
-          job market. We also notice that companies face challenges to grow
-          their internal talent into leadership positions, due to limited
-          resources in talent development and or the rapid changes in the
-          industry landscape. That's why we create the Industry Leader Program
-          to help companies equip them with ready, world class skills and
-          capabilities taught by real world practitioners and leaders.
+          Di Kellner Simora Internasional, kami menawarkan layanan{' '}
+          <b>Pengembangan Bakat Berbasis Profesi</b> yang memberikan perusahaan
+          lulusan universitas baru yang siap kerja. Kami menyediakan program
+          bootcamp untuk mempercepat proses onboarding mereka dengan
+          keterampilan siap pakai untuk berbagai peran seperti Sales/Account,
+          Marketing, Human Capital, Project Manager, Administrator IT, Akuntan
+          dan Financial Analyst, serta Data Analyst.
+        </Text>
+        <Text mt={'1em'}>
+          Selain itu, kami menawarkan kursus-kursus yang dipimpin oleh{' '}
+          <b>Subject Matter Expert (SME)</b> yang merupakan profesional kelas
+          dunia dengan pengetahuan dan pengalaman dalam setiap bidang. Kursus
+          kami mencakup berbagai area seperti Penjualan & Pemasaran, Organisasi,
+          Soft Skills, Keahlian Digital, dan Keahlian Analitik, serta Sumber
+          Daya Manusia. Kursus khusus juga tersedia sesuai kebutuhan spesifik
+          perusahaan Anda, memastikan bahwa kami menyediakan pelatihan yang
+          relevan dan efektif untuk mengembangkan talenta kelas dunia.
         </Text>
       </>
     ),
@@ -243,14 +245,23 @@ export const Programtems: FieldItemType[] = [
     content: (
       <>
         <Text>
-          We also offer Talent Placement Services that support companies to
-          recruit external talent to meet the required growing role position in
-          that company. Our Talent Placement Service doesn’t only recruit
-          external talent based on the company’s requirements but also infuse
-          these external talents with our well-established Talent Development
-          Services , to strengthen the candidates skills and capabilities as
-          part of talent on-boarding into the company.
+          Kellner menawarkan layanan pengembangan perusahaan dengan program
+          Pelatihan dan Konsultasi ISO. Melalui program ini, perusahaan Anda
+          akan bertransformasi menjadi organisasi dengan standar dan kualitas
+          internasional yang memenuhi harapan pelanggan dan regulator. Layanan
+          kami meliputi:
         </Text>
+        <UnorderedList>
+          <ListItem>ISO 9001: Kualitas</ListItem>
+          <ListItem>ISO 14001: Lingkungan</ListItem>
+          <ListItem>ISO 45001: Kesehatan dan Keselamatan Kerja</ListItem>
+          <ListItem>ISO 22000: Keamanan Pangan</ListItem>
+          <ListItem>ISO 27001: Keamanan Informasi</ListItem>
+          <ListItem>ISO 37001: Anti Penyuapan</ListItem>
+          <ListItem>ISO 21001: Pendidikan</ListItem>
+          <ListItem>ISO 23001: Kontinuitas Bisnis</ListItem>
+          <ListItem>ISO 50001: Energi</ListItem>
+        </UnorderedList>
       </>
     ),
     head: 'Layanan Pengembangan Perusahaan',
@@ -262,13 +273,15 @@ export const Programtems: FieldItemType[] = [
     content: (
       <>
         <Text>
-          We also offer Talent Placement Services that support companies to
-          recruit external talent to meet the required growing role position in
-          that company. Our Talent Placement Service doesn’t only recruit
-          external talent based on the company’s requirements but also infuse
-          these external talents with our well-established Talent Development
-          Services , to strengthen the candidates skills and capabilities as
-          part of talent on-boarding into the company.
+          Kellner juga memberikan dukungan kepada perusahaan dalam merekrut
+          talenta eksternal untuk memenuhi peran dan posisi yang berkembang
+          dalam perusahaan tersebut. Layanan Penempatan Talenta kami <b>tidak hanya
+          merekrut</b> talenta eksternal sesuai dengan kebutuhan perusahaan, tetapi
+          juga mengintegrasikan mereka dengan Layanan Pengembangan Talenta yang
+          telah terbukti efektif. Ini dilakukan untuk <b>memperkuat keterampilan
+          dan kemampuan</b> kandidat sebagai bagian dari proses on-boarding mereka
+          ke dalam perusahaan, memastikan bahwa mereka dapat berkontribusi
+          secara maksimal sejak hari pertama.
         </Text>
       </>
     ),

@@ -33,7 +33,7 @@ function FormSection() {
           Kontak Kami
         </Heading>
         <Text fontSize={'1.25rem'} color={COLOR_GRAY_500}>
-          Our friendly team would love to hear from you.
+          Tim kami dengan senang hati akan membantu Anda.
         </Text>
         <VStack pt={'3rem'} gap={'1.5rem'} alignItems={'stretch'}>
           <Box
@@ -42,7 +42,7 @@ function FormSection() {
             flexDir={{ base: 'column', sm: 'row' }}
           >
             <FormControl>
-              <FormLabel color={COLOR_TEXT}>Nama anda</FormLabel>
+              <FormLabel color={COLOR_TEXT}>Nama</FormLabel>
               <Input type='text' />
             </FormControl>
             <FormControl>
@@ -55,11 +55,11 @@ function FormSection() {
             <Input type='number' />
           </FormControl>
           <FormControl>
-            <FormLabel color={COLOR_TEXT}>Subjek</FormLabel>
-            <Input type='number' />
+            <FormLabel color={COLOR_TEXT}>Topik</FormLabel>
+            <Input type='text' />
           </FormControl>
           <FormControl>
-            <FormLabel color={COLOR_TEXT}>Telepon (opsional)</FormLabel>
+            <FormLabel color={COLOR_TEXT}>Pesan (opsional)</FormLabel>
             <Textarea
               resize={'none'}
               rounded={'md'}

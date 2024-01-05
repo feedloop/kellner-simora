@@ -1,5 +1,5 @@
 import { Location } from '@/assets/svgs';
-import { HQ_ADDRESS } from '@/constants/misc';
+import { HQ_ADDRESS, HQ_BUILDING } from '@/constants/misc';
 import { COLOR_TEXT } from '@/constants/ui';
 import { Heading, Text } from '@chakra-ui/react';
 import Image from 'next/image';
@@ -24,7 +24,7 @@ function LocationSection() {
         textAlign={'center'}
         lineHeight={'1.875rem'}
       >
-        Our Locations Span the Globe, Visit Our Offices for Further Information.
+        Kunjungi kantor kami untuk konsultasi dan informasi lebih lanjut.
       </Text>
       <div className='tw-mt-[4rem] tw-w-full sm:tw-mt-[6rem]'>
         <iframe
@@ -45,9 +45,9 @@ function LocationSection() {
             lineHeight={'1.875rem'}
             fontWeight={'semibold'}
           >
-            Headquarter
+            Head Office
           </Text>
-          <Text>Senin - Sabtu. 09.00 - 18.00</Text>
+          <Text>Senin - Sabtu, 09:00 - 18:00</Text>
         </div>
         <Text
           textAlign={'center'}
@@ -55,6 +55,7 @@ function LocationSection() {
           fontWeight={'semibold'}
           maxW={{ sm: '30%' }}
         >
+          {HQ_BUILDING} <br/>
           {HQ_ADDRESS}
         </Text>
       </div>
