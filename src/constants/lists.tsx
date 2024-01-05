@@ -53,15 +53,15 @@ export const NavDropdownItem: DropdownItemType[] = [
 export const NavDropdownOurPrograms: DropdownOurPrograms[] = [
   {
     label: <span>Pengembangan Talenta</span>,
-    url: `${Routes.OurProgram}?section=1`,
+    url: `${Routes.OurProgram}#1`,
   },
   {
     label: <span>Pengembangan Perusahaan</span>,
-    url: `${Routes.OurProgram}?section=2`,
+    url: `${Routes.OurProgram}#2`,
   },
   {
     label: <span>Penempatan Talenta</span>,
-    url: `${Routes.OurProgram}?section=3`,
+    url: `${Routes.OurProgram}#3`,
   },
 ];
 
@@ -71,18 +71,21 @@ export const AboutListItem = [
     head: 'Pelatihan yang efektif sesuai kebutuhan',
     desc: 'Kami fokus pada pengembangan keterampilan yang sesuai dengan tuntutan industri saat ini, menawarkan pelatihan efektif untuk mempersiapkan peserta dengan keunggulan kompetitif dalam karier internasional.',
     buttonLabel: 'Pelatihan kami',
+    link: `${Routes.OurProgram}#1`,
   },
   {
     icon: Dollar,
     head: 'Jaringan penempatan yang luas',
     desc: 'Dari peluang magang hingga pekerjaan penuh waktu, kami berupaya memfasilitasi kesempatan kerja yang relevan sesuai dengan keinginan dan keterampilan individu untuk sukses dalam lingkungan profesional di Eropa',
     buttonLabel: 'Lihat penempatan',
+    link: `${Routes.OurProgram}#3`,
   },
   {
     icon: Internship,
     head: 'Kesempatan internship',
     desc: 'Dengan akses ke jaringan perusahaan dan organisasi yang beragam, kami berkomitmen untuk membantu peserta memperoleh pengalaman praktis yang bernilai serta membangun fondasi yang kokoh untuk karier global mereka.',
     buttonLabel: 'Lihat internship',
+    link: `${Routes.Recruitment}`,
   },
 ];
 export const NavbarResponsiveList: AccordionListNavbar[] = [
@@ -104,15 +107,15 @@ export const NavbarResponsiveList: AccordionListNavbar[] = [
     children: [
       {
         name: 'Pengembangan Talenta',
-        link: `${Routes.OurProgram}?section=1`,
+        link: `${Routes.OurProgram}#1`,
       },
       {
         name: 'Pengembangan Perusahaan',
-        link: `${Routes.OurProgram}?section=2`,
+        link: `${Routes.OurProgram}#2`,
       },
       {
         name: 'Penempatan Talenta',
-        link: `${Routes.OurProgram}?section=3`,
+        link: `${Routes.OurProgram}#3`,
       },
     ],
   },
@@ -153,6 +156,7 @@ export const SocialFooter: SocialFooterType[] = [
 export const PricingItems: PricingCardType[] = [
   {
     buttonLabel: 'Lihat layanan',
+    link: `${Routes.OurProgram}#1`,
     head: 'Pengembangan Talenta',
     headDesc: 'Membekali lulusan dengan keterampilan tingkat dunia',
     item: [
@@ -165,9 +169,10 @@ export const PricingItems: PricingCardType[] = [
   },
   {
     buttonLabel: 'Lihat layanan',
+    link: `${Routes.OurProgram}#2`,
     head: 'Pengembangan Perusahaan',
     headDesc:
-      'Transformasi korporat untuk mencapai standar internasional',
+    'Transformasi korporat untuk mencapai standar internasional',
     item: [
       'Pelatihan dan konsultasi ISO',
       'Standar internasional untuk berbagai bidang',
@@ -178,6 +183,7 @@ export const PricingItems: PricingCardType[] = [
   },
   {
     buttonLabel: 'Lihat layanan',
+    link: `${Routes.OurProgram}#3`,
     head: 'Penempatan Talenta',
     headDesc:
       'Menghubungkan talenta terbaik untuk kebutuhan perusahaan',

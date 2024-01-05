@@ -51,6 +51,7 @@ function PricingSection() {
             head={item.head}
             headDesc={item.headDesc}
             item={item.item}
+            link={item.link}
           />
         ))}
       </Box>

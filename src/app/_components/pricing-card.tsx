@@ -11,6 +11,7 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
+import NextLink from 'next/link'
 import Image from 'next/image';
 import React from 'react';
 
@@ -18,6 +19,7 @@ export type PricingCardType = {
   head: string;
   headDesc: string;
   item: string[];
+  link: string;
   buttonLabel: string;
   buttonEvent?: () => void;
 };
@@ -29,6 +31,7 @@ export type TestimonialType = {
 function PricingCard({
   buttonEvent,
   buttonLabel,
+  link,
   head,
   headDesc,
   item = [],
@@ -78,6 +81,7 @@ function PricingCard({
           cursor={'pointer'}
           mt={'4rem'}
         >
+                <NextLink href={link} passHref>
           <Button
             variant={'solid'}
             as={Button}
@@ -89,6 +93,7 @@ function PricingCard({
           >
             {buttonLabel}
           </Button>
+          </NextLink>
         </HStack>
       </CardBody>
     </Card>

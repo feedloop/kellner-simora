@@ -61,14 +61,14 @@ function AboutSection() {
                   {item.head}
                 </Text>
                 <Text fontSize={'1rem'}>{item.desc}</Text>
-                <Button
-                  variant={'link'}
-                  color={'primary.500'}
-                  mt={'1.25rem'}
-                  rightIcon={<AiOutlineArrowRight />}
-                >
-                  {item.buttonLabel}
-                </Button>
+                  <Button
+                    variant={'link'}
+                    color={'primary.500'}
+                    mt={'1.25rem'}
+                    rightIcon={<AiOutlineArrowRight />}
+                  >
+                    {item.buttonLabel}
+                  </Button>
               </div>
             </HStack>
           ))}
