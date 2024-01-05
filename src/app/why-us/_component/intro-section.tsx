@@ -22,7 +22,7 @@ function IntroSection() {
           lineHeight={'2.75rem'}
           letterSpacing={'-2%'}
         >
-          Mengapa Memilih Kellner'S
+          Mengapa Memilih Kellner
         </Heading>
         <Text
           color={COLOR_TEXT}
@@ -30,9 +30,9 @@ function IntroSection() {
           maxW={{ sm: '80%' }}
           mx={'auto'}
         >
-          We believe that Indonesia has a big role to play in making our world a
-          better place to live in. With Indonesian values, natural resources and
-          as well as Indonesian talents.
+          Kami percaya bahwa Indonesia memiliki peran besar dalam membuat dunia
+          ini lebih baik, berlandaskan nilai-nilai, sumber daya alam, dan tidak
+          lupa juga dengan talenta-talentanya.
         </Text>
       </VStack>
       <Box
@@ -50,21 +50,21 @@ function IntroSection() {
           maxW={{ sm: '50%' }}
         >
           <Text lineHeight={{ base: '1.5rem', sm: '1.75rem' }}>
-            We also believe that talents are forged through times, experience
-            and skills. The process of forging and enabling Indonesian talents
-            with industry mission-fit, digital-fit, global-fit skills is an
-            approach we, at Kellner Simora, is endeavoring to solve a major
-            problem that Indonesia has today, lack of world-class talents. We
-            believe these world-class talents, uniquely with Indonesian values,
-            are the ones that will lead Indonesian and global companies. Our
-            mission is to forge Indonesian talents to be world-class leaders
+            Kellner Simora Internasional berbagi visi yang sama yaitu Indonesia
+            Emas 2045, Indonesia menjadi negara maju pada tahun 2045, dan karena
+            itu kita mendukung penuh dengan cara mengembangkan bakat talenta dan
+            organisasi lokal. Kami berkomitmen pada pembentukan dan pemberdayaan
+            bakat anak muda Indonesia dengan keterampilan yang sesuai dengan
+            misi industri, digital, dan global untuk mengatasi kurangnya talenta
+            kelas dunia di Indonesia.
           </Text>
           <Text lineHeight={{ base: '1.5rem', sm: '1.75rem' }}>
-            We have witnessed as well, the acceleration of growth can happen
-            in the company with professional hires that comes from outside the
-            company . These type of talents are needed in certain situations,
-            whereby , it is very important to quickly infuse talents into the
-            organization to fulfill the demand.
+            Misi kami, 'Membentuk Talenta dan Organisasi Kelas Dunia untuk
+            Indonesia', mencerminkan dedikasi kami dalam mengembangkan pemimpin
+            masa depan. Kami juga menyadari pentingnya perekrutan profesional
+            dari luar untuk percepatan pertumbuhan perusahaan, di mana
+            mengintegrasikan mereka dengan cepat ke dalam organisasi mendukung
+            pertumbuhan Indonesia menuju status negara maju pada tahun 2045.
           </Text>
         </Box>
       </Box>

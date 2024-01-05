@@ -26,29 +26,32 @@ function IntroSection() {
           maxW={{ sm: '60%' }}
           mx={'auto'}
         >
-          A Holistic Approach to Learning and Professional Development.
+          Pendekatan Holistik dalam Pembelajaran dan Pengembangan Profesional.
         </Text>
       </VStack>
       <HStack display={{ base: 'none', sm: 'flex' }} gap={'4rem'} py={'6rem'}>
         <Image src={ChefImage} alt='chef-smiling' />
         <Box display={'flex'} flexDir={'column'} gap={'.5rem'} maxW={'50%'}>
           <Text lineHeight={'1.75rem'}>
-            The Industry Intake Program is a training program for new hires who
-            have either graduated from universities or have less than 2 years of
-            experience. The program aims to give these talents who are going to
-            be hired or who have just joined the company the skills and
-            knowledge that they will use in their new role with the new company.
-            Our goal is to get these talents ready so that companies can quickly
-            put these new hires to work without a lengthy orientation process.
+            Program Intake Industri adalah program pelatihan untuk karyawan baru
+            yang baru lulus dari universitas atau memiliki pengalaman kerja
+            kurang dari 2 tahun. Program ini bertujuan untuk memberikan
+            keterampilan dan pengetahuan kepada talenta-talenta ini yang akan
+            dipekerjakan atau baru bergabung dengan perusahaan, yang akan mereka
+            gunakan dalam peran baru mereka di perusahaan baru. Tujuan kami
+            adalah untuk mempersiapkan talenta-talenta ini agar perusahaan dapat
+            segera mempekerjakan karyawan baru ini tanpa proses orientasi yang
+            panjang.
           </Text>
           <Text lineHeight={'1.75rem'}>
-            We have identified the following roles that your company will have
-            as new hires in this or upcoming fiscal year. We will equip them
-            with the most current and world-class skills and so they can start
-            working effectively and efficiently for your company’s advantage.
-            Each role will be trained and developed using curated list of
-            courses that has been proven highly used and effective to ensure the
-            success of the role in obtaining their objectives.
+            Kami telah mengidentifikasi peran-peran berikut yang akan menjadi
+            karyawan baru di perusahaan Anda dalam tahun fiskal ini atau yang
+            akan datang. Kami akan membekali mereka dengan keterampilan terkini
+            dan kelas dunia sehingga mereka dapat mulai bekerja secara efektif
+            dan efisien untuk keuntungan perusahaan Anda. Setiap peran akan
+            dilatih dan dikembangkan menggunakan daftar kursus terkurasi yang
+            telah terbukti sangat digunakan dan efektif untuk memastikan
+            keberhasilan peran dalam mencapai tujuannya.
           </Text>
         </Box>
       </HStack>
