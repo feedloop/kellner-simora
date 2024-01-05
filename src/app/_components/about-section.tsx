@@ -3,6 +3,7 @@
 import { AboutImage } from '@/assets/images';
 import { COLOR_GRAY_900, COLOR_TEXT } from '@/constants/ui';
 import { Button, HStack, Heading, Text, VStack } from '@chakra-ui/react';
+import NextLink from 'next/link'
 import Image from 'next/image';
 import React from 'react';
 import AboutIconItem from './about-icon-item';
@@ -61,6 +62,7 @@ function AboutSection() {
                   {item.head}
                 </Text>
                 <Text fontSize={'1rem'}>{item.desc}</Text>
+                <NextLink href={item.link}>
                   <Button
                     variant={'link'}
                     color={'primary.500'}
@@ -69,6 +71,7 @@ function AboutSection() {
                   >
                     {item.buttonLabel}
                   </Button>
+                </NextLink>
               </div>
             </HStack>
           ))}

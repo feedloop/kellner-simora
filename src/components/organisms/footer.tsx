@@ -1,6 +1,6 @@
 'use client';
 
-import { FullLogo } from '@/assets/svgs';
+import { FullLogo, Brand } from '@/assets/svgs';
 import { SocialFooter } from '@/constants/lists';
 import { COMPANY_NAME, HQ_BUILDING, HQ_ADDRESS, HQ_EMAIL, HQ_PHONE } from '@/constants/misc';
 import Routes from '@/constants/routes';
@@ -18,7 +18,7 @@ function Footer() {
     <footer style={{ backgroundColor: COLOR_SNOW_LIGHTEST }}>
       <section className='tw-flex tw-flex-col tw-px-[1rem] tw-py-[4rem] sm:tw-flex-row sm:tw-px-[7rem]'>
         <div className='sm:tw-w-[50%]'>
-          {/* <Image src={FullLogo} alt='full-logo-brand' /> */}
+          <Image src={Brand} alt='full-logo-brand' />
           <Text color={COLOR_TEXT} as='b' lineHeight={'24px'} mt={'2rem'}>
             {COMPANY_NAME}
           </Text>
