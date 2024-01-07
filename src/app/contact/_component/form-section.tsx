@@ -1,16 +1,11 @@
 import { ContactImage } from '@/assets/images';
-import {
-  COLOR_GRAY_500,
-  COLOR_PRIMARY,
-  COLOR_PRIMARY_TEXT,
-  COLOR_TEXT,
-} from '@/constants/ui';
+import { COLOR_GRAY_500, COLOR_PRIMARY, COLOR_TEXT } from '@/constants/ui';
 import {
   Box,
   Button,
   FormControl,
   FormLabel,
-  HStack,
+  FormErrorMessage,
   Heading,
   Input,
   Text,
@@ -21,6 +16,7 @@ import Image from 'next/image';
 import React from 'react';
 
 function FormSection() {
+  const handleSubmit = (e:any) => {e.preventDefault()}
   return (
     <div className='tw-flex tw-justify-between tw-px-[1rem] tw-py-[4rem] sm:tw-p-24'>
       <Image
@@ -35,28 +31,29 @@ function FormSection() {
         <Text fontSize={'1.25rem'} color={COLOR_GRAY_500}>
           Tim kami dengan senang hati akan membantu Anda.
         </Text>
+        <form onSubmit={handleSubmit}>
         <VStack pt={'3rem'} gap={'1.5rem'} alignItems={'stretch'}>
           <Box
             display={'flex'}
             gap={{ base: '1.5rem' }}
             flexDir={{ base: 'column', sm: 'row' }}
           >
-            <FormControl>
+            <FormControl isRequired>
               <FormLabel color={COLOR_TEXT}>Nama</FormLabel>
-              <Input type='text' />
+              <Input type='text' placeholder='Masukkan Nama Anda' />
             </FormControl>
-            <FormControl>
+            <FormControl isRequired>
               <FormLabel color={COLOR_TEXT}>Email</FormLabel>
-              <Input type='email' />
+              <Input type='email' placeholder='Masukkan Email Anda' />
             </FormControl>
           </Box>
           <FormControl>
             <FormLabel color={COLOR_TEXT}>Telepon (opsional)</FormLabel>
-            <Input type='number' />
+            <Input type='number' placeholder='Masukkan Nomor Telepon Anda' />
           </FormControl>
-          <FormControl>
+          <FormControl isRequired>
             <FormLabel color={COLOR_TEXT}>Topik</FormLabel>
-            <Input type='text' />
+            <Input type='text' placeholder='Masukkan Topik' />
           </FormControl>
           <FormControl>
             <FormLabel color={COLOR_TEXT}>Pesan (opsional)</FormLabel>
@@ -71,7 +68,7 @@ function FormSection() {
                 boxShadow: 'none',
                 zIndex: 1,
               }}
-              placeholder='Leave us a message...'
+              placeholder='Masukkan Isi Pesan Anda'
               size='sm'
             />
           </FormControl>
@@ -79,10 +76,12 @@ function FormSection() {
             size={'lg'}
             colorScheme='primary'
             style={{ background: COLOR_PRIMARY }}
+            type='submit'
           >
             Kirim
           </Button>
         </VStack>
+        </form>
       </div>
     </div>
   );
