@@ -1,6 +1,8 @@
 import { CtaImage } from '@/assets/images';
-import { COLOR_PRIMARY, COLOR_SECONDARY } from '@/constants/ui';
+import { COLOR_WHATSAPP, COLOR_SECONDARY } from '@/constants/ui';
 import { Box, Button, Heading, Text } from '@chakra-ui/react';
+import NextLink from 'next/link'
+import { FaWhatsapp } from "react-icons/fa";
 import Image from 'next/image';
 import React from 'react';
 
@@ -34,15 +36,17 @@ function CtaSection() {
           >
             Ikuti jejak 100+ orang yang telah berhasil meraih mimpinya.
           </Text>
-          <Button
-            color={'white'}
-            mt={{ base: '2rem', sm: '2.5rem' }}
-            colorScheme='primary'
-            className=' tw-w-full sm:tw-w-fit'
-            style={{ background: COLOR_PRIMARY }}
-          >
-            Daftar pelatihan
-          </Button>
+          <NextLink href="https://wa.me/62811125838" target='_blank' passHref>
+            <Button
+              leftIcon={<FaWhatsapp />}
+              color={'white'}
+              colorScheme='primary'
+              style={{ background: COLOR_WHATSAPP }}
+              w={{ base: 'full', sm: 'fit-content' }}
+            >
+              Daftar pelatihan via Whatsapp
+            </Button>
+          </NextLink>
         </div>
         <Image
           src={CtaImage}
