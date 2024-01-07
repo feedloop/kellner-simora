@@ -31,7 +31,7 @@ function FormSection() {
         <Text fontSize={'1.25rem'} color={COLOR_GRAY_500}>
           Tim kami dengan senang hati akan membantu Anda.
         </Text>
-        <form onSubmit={handleSubmit}>
+        <form>
         <VStack pt={'3rem'} gap={'1.5rem'} alignItems={'stretch'}>
           <Box
             display={'flex'}
