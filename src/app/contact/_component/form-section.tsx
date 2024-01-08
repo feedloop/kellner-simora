@@ -28,7 +28,7 @@ function FormSection() {
   const apiFrom = "no-reply@kellnersimora.com"
   const apiIsTransactional = "true"
   const handle = async (e:any) => {
-    await axios.post(urlAPI+apiKey+"subject="+subject+"&from="+apiFrom+"&to="+email+"&bodyText="+message+"&isTransactional="+apiIsTransactional+"&bodyHtml=<p>"+"Nama: "+name+"<br />"+"Telepon: "+phone+"<br />"+"Pesan: "+"<br />"+message+"</p>")
+    await axios.post(urlAPI+apiKey+"subject="+subject+"&from="+apiFrom+"&to=support@kellnersimora.com&bodyText="+message+"&isTransactional="+apiIsTransactional+"&bodyHtml=<p>"+"Nama: "+name+"<br />"+"Telepon: "+phone+"<br />"+"Pesan: "+"<br />"+message+"</p>")
     .then(function (response) {
       alert("Pesan terkirim");
     })
