@@ -34,7 +34,7 @@ function FormSection() {
   const apiMassageValue = "<table><tr><td><b>Nama</b></td><td>: "+name+"</td></tr><tr><td><b>Telepon</b></td><td>: "+phone+"</td></tr><tr><td><b>Email</b></td><td>: "+email+"</td></tr><tr><td><b>Isi Pesan</b></td><td>: </td></tr></table><p>"+message+"</p>"
   const handle = async (e:any) => {
     setLoading(true)
-    await axios.post(urlAPI+apiKey+"subject="+subject+"&from="+apiFrom+"&to="+apiTo+"&bodyText="+message+"&isTransactional="+apiIsTransactional+"&bodyHtml="+apiMassageValue)
+    await axios.post(urlAPI+apiKey+"subject=New contact form submission: "+subject+"&from="+apiFrom+"&to="+apiTo+"&bodyText="+message+"&isTransactional="+apiIsTransactional+"&bodyHtml="+apiMassageValue)
     .then(function (response) {
       if (response.data.success) {
         setLoading(false)
