@@ -176,8 +176,8 @@ export const PricingItems: PricingCardType[] = [
       'Pelatihan dan konsultasi ISO',
       'Standar internasional untuk berbagai bidang',
       'Standar mutu, keamanan data, sampai dengan energi',
-      'TMeningkatkan reputasi dan kepatuhan',
-      'Cakupan lengkap dari ISO 5001 hingga ISO 45001',
+      'Meningkatkan reputasi dan kepatuhan',
+      'Cakupan lengkap dari ISO 9001 hingga ISO 50001',
     ],
   },
   {
