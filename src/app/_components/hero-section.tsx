@@ -70,7 +70,7 @@ function HeroSection() {
       <Image
         src={WomenHeroSection}
         alt='big-hero-img'
-        className='tw-absolute tw-bottom-0 tw-right-5 tw-z-[1] tw-hidden tw-w-1/2 sm:tw-w-[40%] md:tw-hidden md:tw-w-[40%]  lg:tw-block'
+        className='tw-absolute tw-bottom-0 tw-right-5 tw-z-[1] tw-hidden tw-w-1/2 sm:tw-w-[40%] md:tw-hidden md:tw-w-[50%]  lg:tw-block'
       />
     </section>
   );
